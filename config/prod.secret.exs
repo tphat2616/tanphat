@@ -14,7 +14,7 @@ config :tanphat, Tanphat.Repo,
 
 config :tanphat, TanphatWeb.Endpoint,
   server: true,
-  http: [port: 443],
+  http: [port: 80],
   url: [host: "51.79.165.79", theme: "http"],
   # https: [
   #   port: 443,

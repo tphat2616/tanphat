@@ -18,7 +18,6 @@ config :tanphat, TanphatWeb.Endpoint,
   secret_key_base: "VdEaZh0DFVDEeLHSzlKrMx5k/EmXSZPL1SUnUVo54SjfvvVf87FOcMFBS0KELNEF",
   live_view: [signing_salt: "fOLDeUr4X"],
   code_reloader: false,
-  cache_static_manifest: "priv/static/cache_manifest.json"
 
 # ## Using releases (Elixir v1.9+)
 #

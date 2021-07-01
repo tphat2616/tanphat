@@ -17,7 +17,7 @@ config :tanphat, TanphatWeb.Endpoint,
   http: [scheme: "https", host: "tanphat.dev", port: 443],
   secret_key_base: "VdEaZh0DFVDEeLHSzlKrMx5k/EmXSZPL1SUnUVo54SjfvvVf87FOcMFBS0KELNEF",
   live_view: [signing_salt: "fOLDeUr4X"],
-  code_reloader: false,
+  code_reloader: false
 
 # ## Using releases (Elixir v1.9+)
 #

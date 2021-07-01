@@ -1,4 +1,3 @@
-export PATH="$PATH:/elixir/bin"
 export SECRET_KEY_BASE=`mix phx.gen.secret 64`
 
 # Stop previous run

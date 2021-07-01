@@ -14,7 +14,14 @@ config :tanphat, Tanphat.Repo,
 
 config :tanphat, TanphatWeb.Endpoint,
   server: true,
-  http: [scheme: "https", host: "tanphat.dev", port: 443],
+  url: [host: "tanphat.dev", port: 443],
+  # https: [
+  #   port: 443,
+  #   cipher_suite: :strong,
+  #   keyfile: "/etc/letsencrypt/live/admin.25plus.vn/privkey.pem",
+  #   certfile: "/etc/letsencrypt/live/admin.25plus.vn/cert.pem",
+  #   cacertfile: "/etc/letsencrypt/live/admin.25plus.vn/chain.pem"
+  # ],
   secret_key_base: "VdEaZh0DFVDEeLHSzlKrMx5k/EmXSZPL1SUnUVo54SjfvvVf87FOcMFBS0KELNEF",
   live_view: [signing_salt: "fOLDeUr4X"],
   code_reloader: false

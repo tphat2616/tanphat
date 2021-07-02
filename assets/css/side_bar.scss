@@ -5,7 +5,9 @@
     left: 0;
     top: 10%;
     overflow-x: hidden;
-    background-color: #0D9335;
+    background: linear-gradient(
+        325deg
+        ,#10B839 , #FF0F10  90%);
     border-radius: 0 10px 10px 0;
 }
 .icon-toolbar_element {

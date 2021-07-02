@@ -10,7 +10,7 @@ npm install --prefix ./assets
 
 # Compile assets
 npm run deploy --prefix ./assets
-mix phx.digest
+MIX_ENV=prod mix phx.digest
 
 # Release
 MIX_ENV=prod mix release

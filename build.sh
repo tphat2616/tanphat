@@ -1,17 +1,17 @@
-export SECRET_KEY_BASE=`mix phx.gen.secret 64`
-
 # Stop previous run
 sudo _build/prod/rel/tanphat/bin/tanphat stop
-# _build/prod/rel/client_25plus_gateway/bin/client_25plus_gateway
 
-# Remove the existing release directory and build the release
-sudo rm -rf "_build"
-
-#!/usr/bin/env bash
 # Initial setup
 mix deps.get --only prod
 MIX_ENV=prod mix compile
 
+# Install / update  JavaScript dependencies
+npm install --prefix ./assets
+
+# Compile assets
+npm run deploy --prefix ./assets
+mix phx.digest
+
 # Release
 MIX_ENV=prod mix release
-sudo _build/prod/rel/tanphat/bin/tanphat daemon_iex
+sudo _build/prod/rel/tanphat/bin/tanphat start

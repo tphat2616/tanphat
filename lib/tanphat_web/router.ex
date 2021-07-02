@@ -17,7 +17,7 @@ defmodule TanphatWeb.Router do
   scope "/", TanphatWeb do
     pipe_through :browser
 
-    live "/", PageLive, :index
+    live "/", PageLive, :home_index
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,14 @@
+<nav class="top-bar flex-row">
+    <%= live_patch class: "", to: Routes.page_path(@socket, :home_index ) do %>
+        <img class="home" src="/images/home.png" alt="" title="" />
+    <% end %>
+    <p class="date-time">13:54</p>
+    <div class="flex-row">
+        <%= content_tag :a, class: "", phx_value_locale: "vi", phx_click: :switch_language, phx_target: @myself do %>
+            <img class="flag" src="/images/vietnam.png" alt="" title="">
+            <% end %>
+        <%= content_tag :a, class: "", phx_value_locale: "en", phx_click: :switch_language, phx_target: @myself do %>
+            <img class="flag" src="/images/usa.png" alt="" title="">
+            <% end %>
+    </div>
+</nav>

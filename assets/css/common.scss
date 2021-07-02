@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background-image: url("/images/doge_moon.jpg");
+}
+ p {
+     margin: 0;
+ }
+ .flex-column {
+     display: flex;
+     flex-direction: column;
+ }
+ .flex-row {
+     display: flex;
+     flex-direction: row;
+ }
+ .red-color {
+    color: #FF0F10
+ }
+ .green-color {
+    color: #10B839
+ }
+ .item-center {
+    justify-content: center;
+    align-items: center;
+ }

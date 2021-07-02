@@ -1,0 +1,17 @@
+.side_bar {
+    position: fixed;
+    width: 5%;
+    height: 500px;
+    left: 0;
+    top: 10%;
+    overflow-x: hidden;
+    background-color: #0D9335;
+    border-radius: 0 10px 10px 0;
+}
+.icon-toolbar_element {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 50%;
+}

@@ -5,7 +5,7 @@ defmodule TanphatWeb.PageRouter do
           [
             component: TanphatWeb.HomeLive.HomeIndex,
             id: "home-page",
-            title: "Home",
+            title: "Phát - Web developer",
             live_action: :home_index
           ],
         ]

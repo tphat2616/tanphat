@@ -8,6 +8,54 @@ defmodule TanphatWeb.PageRouter do
             title: "Phát - Web developer",
             live_action: :home_index
           ],
+          [
+            component: TanphatWeb.ProgramingLanguages.ProgramingLanguage,
+            id: "code-page",
+            title: "Programing Languages",
+            live_action: :programing_language
+          ],
+          [
+            component: TanphatWeb.Crytocurrency.CrytoIndex,
+            id: "cryto-page",
+            title: "Crytocurrency",
+            live_action: :crytocurrency
+          ],
+          [
+            component: TanphatWeb.StockExchange.StockExchangeIndex,
+            id: "stock-exchange",
+            title: "Stock-Exchange",
+            live_action: :stock_exchange
+          ],
+          [
+            component: TanphatWeb.APICollection.APIPage,
+            id: "api-collection",
+            title: "API",
+            live_action: :api
+          ],
+          [
+            component: TanphatWeb.Tutorials.TutorialPage,
+            id: "tutorials",
+            title: "Tutorials",
+            live_action: :tutorial
+          ],
+          [
+            component: TanphatWeb.Ultilities.UltilityPage,
+            id: "ultility",
+            title: "Ultilities",
+            live_action: :ultility
+          ],
+          [
+            component: TanphatWeb.Books.BookPage,
+            id: "books",
+            title: "Books",
+            live_action: :book
+          ],
+          [
+            component: TanphatWeb.AboutMe.MySite,
+            id: "my-site",
+            title: "About Me",
+            live_action: :my_site
+          ],
         ]
     end
 

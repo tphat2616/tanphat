@@ -18,6 +18,14 @@ defmodule TanphatWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :home_index
+    live "/programing-languages", PageLive, :programing_language
+    live "/crytocurrencies", PageLive, :crytocurrency
+    live "/stock-exchange", PageLive, :stock_exchange
+    live "/api", PageLive, :api
+    live "/tutorials", PageLive, :tutorial
+    live "/ultilities", PageLive, :ultility
+    live "/books", PageLive, :book
+    live "/about-me", PageLive, :my_site
   end
 
   # Other scopes may use custom stacks.

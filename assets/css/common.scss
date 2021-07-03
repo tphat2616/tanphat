@@ -1,9 +1,12 @@
 body {
     margin: 0;
-    background-image: url("/images/doge_moon.jpg");
 }
  p {
      margin: 0;
+ }
+ a {
+    cursor: pointer;
+    color: currentColor;
  }
  .flex-column {
      display: flex;

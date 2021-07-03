@@ -4,12 +4,13 @@ defmodule TanphatWeb.PageLive do
 
   @impl true
   def mount(_params, session, socket) do
-    {:ok, assign(socket, query: "", results: %{})}
+    socket = socket |> fetch_locale(session)
+    {:ok, socket}
   end
 
   @impl true
   def handle_params(params, uri, socket) do
-    {:noreply, Navigator.handle_navigation(params, uri, socket)}
+    {:noreply, Navigator.handle_navigation(params, uri, fetch_locale(socket, params))}
   end
 
   @impl true

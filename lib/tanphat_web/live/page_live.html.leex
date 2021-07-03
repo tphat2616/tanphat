@@ -1,4 +1,3 @@
 <%= live_component @socket, TanphatWeb.Toolbar.TopBar, Map.put(assigns, :id, "desktop-navbar") %>
 <%= live_component @socket, TanphatWeb.Toolbar.SideBar, route: assigns[:root_route] %>
 <%= live_component @socket, assigns[:root_route][:component], get_assigns_for_mainpage(assigns) %>
-<%= live_component @socket, TanphatWeb.Toolbar.BottomBar, route: assigns[:root_route] %>

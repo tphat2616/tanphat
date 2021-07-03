@@ -9,7 +9,7 @@
 .home{
     width: 20px;
     height: 20px;
-    padding-left: 25px;
+    padding-left: 20px;
 }
 .date-time {
     width: 100%;
@@ -20,4 +20,8 @@
     margin-right: 10px;
     width: 20px;
     height: 20px;
+}
+.flag:hover {
+    transform: perspective(200px) rotateY(35deg);
+    transition-duration: 1s;
 }

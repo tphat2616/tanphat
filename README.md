@@ -9,3 +9,6 @@
 ##  - Books
 ##  - Api
 ##  - About me
+
+## mix gettext.extract
+## mix gettext.merge priv/gettext

@@ -1,0 +1,3 @@
+<%= for {name, content} <- Map.to_list(get_metadata(@conn)) do %>
+  <meta name="<%= name %>" content="<%= content %>" />
+<% end %>

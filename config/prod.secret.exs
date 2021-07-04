@@ -25,7 +25,13 @@ config :tanphat, TanphatWeb.Endpoint,
   ],
   secret_key_base: "VdEaZh0DFVDEeLHSzlKrMx5k/EmXSZPL1SUnUVo54SjfvvVf87FOcMFBS0KELNEF",
   live_view: [signing_salt: "fOLDeUr4X"],
-  code_reloader: false
+  code_reloader: false,
+  metatag: [
+    title: "BITCOIN NEVA DIES",
+    description: "Trang website lưu trữ thông tin",
+    image: "https://tanphat.dev/images/bitcoin_shortcut.png",
+    site: "https://tanphat.dev"
+  ]
 
 # ## Using releases (Elixir v1.9+)
 #

@@ -29,7 +29,7 @@ config :tanphat, TanphatWeb.Endpoint,
   metatag: [
     title: "BITCOIN NEVA DIES",
     description: "Trang website lưu trữ thông tin",
-    image: "https://tanphat.dev/images/bitcoin_shortcut.png",
+    image: "https://tanphat.dev/images/bitcoin.svg",
     site: "https://tanphat.dev"
   ]
 

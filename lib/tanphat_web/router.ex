@@ -28,6 +28,12 @@ defmodule TanphatWeb.Router do
     live "/about-me", PageLive, :my_site
   end
 
+  scope "/", TanphatWeb do
+    pipe_through :browser
+
+    get "/coming-soon", PageLive, :coming_soon
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", TanphatWeb do
   #   pipe_through :api

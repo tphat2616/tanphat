@@ -1,0 +1,7 @@
+<div class="programing-language-page">
+    <div class="loading-screen_content">
+        <img style="width: 75px; height: 75px" src="/images/bitcoin_shortcut.png" alt="empty-icon">
+        <h1 class="error-title"><%= gettext("Coming soon") %></h3>
+        <h3 style="text-align: center"><%= gettext("This feature is under construction and will be available soon") %></h4>
+    <div>
+</div>

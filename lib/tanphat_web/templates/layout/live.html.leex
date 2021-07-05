@@ -7,5 +7,9 @@
     phx-click="lv:clear-flash"
     phx-value-key="error"><%= live_flash(@flash, :error) %></p>
 
-  <%= @inner_content %>
+  <%= if @socket.connected? do %>
+    <%= @inner_content %>
+  <% else  %>
+    <%= render TanphatWeb.ErrorView, "not_connected.html" %>
+  <% end %>
 </main>

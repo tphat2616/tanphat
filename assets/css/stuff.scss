@@ -1,0 +1,21 @@
+.loading-screen {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    color: #F79413;
+    background-color: #F4F4F4;
+}
+.loading-screen_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+@media (max-width: 375px){
+    .loading-screen {
+        width: 100%;
+    }
+}

@@ -25,8 +25,9 @@
     padding: 5px;
     margin: 4px;
     border-radius: 50%;
+    transform: translateX(0);
 }
 .icon-toolbar_element:hover {
-    transform: translateX(calc(0.15em * 3 + 0.08em * 2));
+    transform: translateX(calc(0.10em * 3 + 0.08em * 2));
     transition: 0.7s;
 }

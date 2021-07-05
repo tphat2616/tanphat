@@ -2,4 +2,12 @@
     position: fixed;
     right: 0;
     top: 25px;
+    width: 95.5%;
+    height: 100%;
+}
+@media (max-width: 375px){
+    .home-page {
+        width: 88%;
+        top: 13%;
+    }
 }

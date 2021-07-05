@@ -17,19 +17,19 @@ defmodule TanphatWeb.PageRouter do
           [
             component: TanphatWeb.Crytocurrency.CrytoIndex,
             id: "cryto-page",
-            title: "Crytocurrency",
+            title: "Crytocurrencied",
             live_action: :crytocurrency
           ],
           [
             component: TanphatWeb.StockExchange.StockExchangeIndex,
             id: "stock-exchange",
-            title: "Stock-Exchange",
+            title: "Stock Exchange",
             live_action: :stock_exchange
           ],
           [
             component: TanphatWeb.APICollection.APIPage,
             id: "api-collection",
-            title: "API",
+            title: "API Collections",
             live_action: :api
           ],
           [

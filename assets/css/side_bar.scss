@@ -1,6 +1,7 @@
 .side_bar {
     position: fixed;
-    width: 60px;
+    // width: 60px;
+    width: 4.5%;
     height: 100%;
     left: 0;
     top: 25px;
@@ -10,12 +11,17 @@
         ,#10B839 , #FF0F10  90%);
     // border-radius: 0 10px 10px 0;
 }
+@media only screen and (max-width: 375px) {
+    .side_bar {
+        width: 12%;
+    }
+}
 .icon-toolbar {
     margin-top: 20px;
 }
 .icon-toolbar_element {
-    width: 40px;
-    height: 40px;
+    width: 65%;
+    height: 0%;
     padding: 5px;
     margin: 4px;
     border-radius: 50%;

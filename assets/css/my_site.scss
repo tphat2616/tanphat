@@ -5,3 +5,8 @@
     width: 1306px;
     height: 100%;
 }
+@media (max-width: 375px){
+    .my-page {
+        width: 88%;
+    }
+}

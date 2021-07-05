@@ -1,1 +1,7 @@
-<%= render TanphatWeb.ErrorView, "coming_soon.html", id: @id, conn: @socket %>
+<div class="programing-language-page" id="<%= @id %>" onclick>
+    <section class="recipe-25pls">
+        <%= live_component @socket, TanphatWeb.BlogCollection.Blog,
+            blogs: @paginator.entries %>
+    </section>
+
+</div>

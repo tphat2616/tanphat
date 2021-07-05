@@ -26,6 +26,8 @@ defmodule TanphatWeb.Router do
     live "/ultilities", PageLive, :ultility
     live "/books", PageLive, :book
     live "/about-me", PageLive, :my_site
+    live "/topics", PageLive, :blog_index
+    live "/topic", PageLive, :blog_index
   end
 
   scope "/", TanphatWeb do

@@ -12,6 +12,6 @@ msgstr ""
 "Plural-Forms: nplurals=2\n"
 
 #, elixir-format
-#: lib/tanphat_web/live/toolbar/top_bar.html.leex:7
-msgid "Web is not support for mobile layout"
+#: lib/tanphat_web/templates/error/not_connected.html.eex:4
+msgid "Connecting"
 msgstr ""

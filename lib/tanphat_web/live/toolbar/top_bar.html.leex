@@ -5,7 +5,7 @@
         <img class="home" src="/images/home.png" alt="" title="Home" />
     <% end %>
     <iframe class="date-time" src="https://free.timeanddate.com/clock/i7vo56eb/fcfff/tc000/pc000/th1" frameborder="0" width="57" height="18"></iframe>
-    <div style="display: inherit;">
+    <div style="display: inherit; position: fixed; right: 0;">
         <%= content_tag :a, class: "", phx_value_locale: "vi", phx_click: :switch_language, phx_target: @myself do %>
             <img class="flag" src="/images/vietnam.png" alt="">
         <% end %>

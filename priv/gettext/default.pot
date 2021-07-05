@@ -13,4 +13,4 @@ msgstr ""
 #, elixir-format
 #: lib/tanphat_web/templates/error/not_connected.html.eex:4
 msgid "Connecting"
-msgstr "Đang kết nối"
+msgstr ""

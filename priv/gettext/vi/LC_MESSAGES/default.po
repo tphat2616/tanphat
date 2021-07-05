@@ -15,3 +15,13 @@ msgstr ""
 #: lib/tanphat_web/templates/error/not_connected.html.eex:4
 msgid "Connecting"
 msgstr "Đang kết nối"
+
+#, elixir-format
+#: lib/tanphat_web/templates/error/coming_soon.html.eex:4
+msgid "Coming soon"
+msgstr "Chuẩn bị ra mắt"
+
+#, elixir-format
+#: lib/tanphat_web/templates/error/coming_soon.html.eex:5
+msgid "This feature is under construction and will be available soon"
+msgstr "Chức năng đang phát triển sẽ sớm được ra mắt."

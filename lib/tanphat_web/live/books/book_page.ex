@@ -3,7 +3,7 @@ defmodule TanphatWeb.Books.BookPage do
     alias Tanphat.TopicService
 
     def handle_params(params, _uri, socket) do
-        params = params |> Map.put("page_size", 6)
+        params = params |> Map.put("page_size", 8)
         {:noreply, socket |> assign(query: params) |> fetch_blog(params)}
     end
 

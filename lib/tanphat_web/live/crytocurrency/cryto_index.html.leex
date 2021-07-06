@@ -1,6 +1,6 @@
 <div class="cryto-page" id="<%= @id %>" onclick>
     <section class="recipe-25pls">
-        <%= live_component @socket, TanphatWeb.BlogCollection.Blog,
+        <%= live_component @socket, TanphatWeb.BlogCollection.BlogCryto,
             blogs: @paginator.entries %>
     </section>
     <%= live_component @socket, TanphatWeb.SharedLive.Paginator,

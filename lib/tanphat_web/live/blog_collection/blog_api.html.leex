@@ -1,0 +1,20 @@
+<div class="grid-group">
+    <%= for blog <- assigns[:blogs] do %>
+        <%= live_patch class: "grid-item-4", to: Routes.page_path(@socket, :api ) do %>
+            <div >
+                <div>
+                    <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />
+                </div>
+                <h3>
+                    <span><%= Printer.translate_data blog, :title %></span>
+                </h3>
+                <div class="grid-item_icon-group">
+                    <img class="grid-item_icon-group_img" src="/images/thumb-up.png" alt="" />
+                    <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :like %></span>
+                    <img class="grid-item_icon-group_img_2" src="/images/thumb-down.png" alt="" />
+                    <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :dislike %></span>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+</div>

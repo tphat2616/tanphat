@@ -6,7 +6,7 @@
     grid-gap: 0px;
     grid-template-columns: repeat(3, 33.33%);
     display: grid;
-    .grid-item {
+    .grid-item-1 {
         flex: 1 1 auto;
         padding: 15px;
         margin: 20px 20px 0 0;
@@ -16,6 +16,50 @@
         border-radius: 10px;
         text-decoration: none;
         color: #444444
+    }
+    .grid-item-2 {
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: linear-gradient(
+            325deg
+            ,#fc4a1a , #f7b733  90%);
+        border-radius: 10px;
+        text-decoration: none;
+        color: #444444
+    }
+    .grid-item-3 {
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: linear-gradient(
+            325deg
+            ,#8CBF84 , #DE7875  90%);
+        border-radius: 10px;
+        text-decoration: none;
+        color: #444444
+    }
+    .grid-item-4 {
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: linear-gradient(
+            325deg
+            ,#009FFF , #ec2F4B  90%);
+        border-radius: 10px;
+        text-decoration: none;
+        color: white
+    }
+    .grid-item-5 {
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: linear-gradient(
+            325deg
+            ,#2193b0 , #6dd5ed  90%);
+        border-radius: 10px;
+        text-decoration: none;
+        color: white
     }
     .grid-item_icon-group {
         display: flex;

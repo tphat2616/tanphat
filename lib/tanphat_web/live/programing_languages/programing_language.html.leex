@@ -1,6 +1,6 @@
 <div class="programing-language-page" id="<%= @id %>" onclick>
     <section class="recipe-25pls">
-        <%= live_component @socket, TanphatWeb.BlogCollection.Blog,
+        <%= live_component @socket, TanphatWeb.BlogCollection.BlogProgramingLanguage,
             blogs: @paginator.entries %>
     </section>
     <%= live_component @socket, TanphatWeb.SharedLive.Paginator,

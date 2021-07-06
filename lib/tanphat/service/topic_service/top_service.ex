@@ -8,8 +8,9 @@ defmodule Tanphat.TopicService do
         |> Repo.insert()
     end
 
-    def list_blog(opts \\ []) do
+    def list_blog(topic_id, opts \\ []) do
         Topic
+        |> where([tp], tp.topic_id == ^topic_id)
         |> order_by(desc: :like)
         |> order_by(desc: :updated_at)
         |> Repo.paginate(opts)

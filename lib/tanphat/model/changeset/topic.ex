@@ -9,7 +9,8 @@ defmodule Topic do
         :inner_html_en,
         :url,
         :like,
-        :dislike
+        :dislike,
+        :topic_id
     ]
 
     @required_key []
@@ -22,6 +23,7 @@ defmodule Topic do
         field :url, :string
         field :like, :integer
         field :dislike, :integer
+        field :topic_id, :integer
 
         timestamps()
     end

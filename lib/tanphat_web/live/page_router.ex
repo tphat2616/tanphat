@@ -33,10 +33,10 @@ defmodule TanphatWeb.PageRouter do
             live_action: :api
           ],
           [
-            component: TanphatWeb.Tutorials.TutorialPage,
-            id: "tutorials",
-            title: "Tutorials",
-            live_action: :tutorial
+            component: TanphatWeb.Artical.ArticalPage,
+            id: "artical",
+            title: "Scientific Artical",
+            live_action: :artical
           ],
           [
             component: TanphatWeb.Ultilities.UltilityPage,

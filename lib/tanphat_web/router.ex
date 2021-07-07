@@ -22,7 +22,7 @@ defmodule TanphatWeb.Router do
     live "/crytocurrencies", PageLive, :crytocurrency
     live "/stock-exchange", PageLive, :stock_exchange
     live "/api-collections", PageLive, :api
-    live "/tutorials", PageLive, :tutorial
+    live "/scientific-artical", PageLive, :artical
     live "/ultilities", PageLive, :ultility
     live "/books", PageLive, :book
     live "/about-me", PageLive, :my_site

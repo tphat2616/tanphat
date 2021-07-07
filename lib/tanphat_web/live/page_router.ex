@@ -17,7 +17,7 @@ defmodule TanphatWeb.PageRouter do
           [
             component: TanphatWeb.Crytocurrency.CrytoIndex,
             id: "cryto-page",
-            title: "Crytocurrencied",
+            title: "Crytocurrencies",
             live_action: :crytocurrency
           ],
           [

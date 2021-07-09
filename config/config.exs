@@ -10,6 +10,13 @@ use Mix.Config
 config :tanphat,
   ecto_repos: [Tanphat.Repo]
 
+config :tanphat, Tanphat.Scheduler,
+  jobs: [
+    # Every minute
+    {"* * * * *", {Tanphat.ApiService, :glo_and_com_index, []}}
+    # {{:cron, "* * * * *"},     {Heartbeat, :send, []}},
+  ]
+
 # Configures the endpoint
 config :tanphat, TanphatWeb.Endpoint,
   url: [host: "localhost"],

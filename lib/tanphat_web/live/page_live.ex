@@ -13,11 +13,6 @@ defmodule TanphatWeb.PageLive do
     {:noreply, Navigator.handle_navigation(params, uri, fetch_locale(socket, params))}
   end
 
-  @impl true
-  def handle_info({:update_assigns, payload}, socket) do
-    {:noreply, assign(socket, payload)}
-  end
-
   def get_assigns_for_mainpage(assigns) do
     assigns
     |> Map.put(:id, assigns[:root_route][:id])
@@ -38,5 +33,4 @@ defmodule TanphatWeb.PageLive do
 
     assign(socket, :locale, locale)
   end
-
 end

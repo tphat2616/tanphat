@@ -14,7 +14,9 @@ defmodule Tanphat.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Tanphat.PubSub},
       # Start the Endpoint (http/https)
-      TanphatWeb.Endpoint
+      TanphatWeb.Endpoint,
+      # cron jobs
+      Tanphat.Scheduler
       # Start a worker by calling: Tanphat.Worker.start_link(arg)
       # {Tanphat.Worker, arg}
     ]

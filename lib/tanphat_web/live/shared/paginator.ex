@@ -12,7 +12,7 @@ defmodule TanphatWeb.SharedLive.Paginator do
           id: "page-first",
           to: compute_url(@socket, assigns, 1),
           class: "btn-icon" %>
-
+      
         <%= for page <- page_list(@paginator) do %>
           <%= live_patch page, 
             id: "page-##{page}",

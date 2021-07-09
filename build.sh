@@ -1,8 +1,3 @@
-# pull git
-sudo git pull
-tphat2616@gmail.com | command-that-asks-for-input
-a09098237720 | command-that-asks-for-input
-
 # Stop previous run
 sudo _build/prod/rel/tanphat/bin/tanphat stop
 

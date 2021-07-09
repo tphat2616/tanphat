@@ -14,6 +14,6 @@ MIX_ENV=prod mix phx.digest
 
 # Release
 MIX_ENV=prod mix release
-yes | command-that-asks-for-input
+yes
 # Run new session
 sudo _build/prod/rel/tanphat/bin/tanphat daemon_iex

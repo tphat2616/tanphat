@@ -11,6 +11,7 @@ config :tanphat,
   ecto_repos: [Tanphat.Repo]
 
 config :tanphat, Tanphat.Scheduler,
+  debug_logging: false,
   jobs: [
     # Every minute
     {"* * * * *", {Tanphat.ApiService, :glo_and_com_index, []}}

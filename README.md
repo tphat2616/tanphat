@@ -12,4 +12,4 @@
 
 ## mix gettext.extract
 ## mix gettext.merge priv/gettext
-
+## chmod +x build.sh

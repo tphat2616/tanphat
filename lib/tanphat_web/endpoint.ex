@@ -1,6 +1,7 @@
 defmodule TanphatWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :tanphat
   plug Plug.RequestId
+  plug TanphatWeb.Plugs.ClientIp
   plug Plug.Logger
 
   # The session will be stored in the cookie and signed,

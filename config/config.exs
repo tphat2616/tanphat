@@ -27,7 +27,8 @@ config :logger,
 config :logger, :info_log,
   path: Path.expand("debug/info.log"),
   format: "\n$date $time $metadata[$level] $levelpad$message\n",
-  level: :info
+  level: :info,
+  metadata: [:client_ip]
 
 config :logger, :debug_log,
   path: Path.expand("debug/debug.log"),

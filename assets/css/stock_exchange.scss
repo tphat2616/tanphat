@@ -5,6 +5,42 @@
     width: 1283px;
     height: 100%;
 }
+.stock-exchange-page__index {
+    padding-left: 5px;
+    height: 13%;
+    align-items: center;
+    margin-top: 70px;
+}
+.stock-exchange-page__index__ele {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-right: 10px
+}
+.incr{
+    font-weight: 600;
+    color: green
+}
+.des{
+    font-weight: 600;
+    color: red;
+}
+.line {
+    height: 75px;
+    margin: 19px;
+}
+.cross-line{
+    height: 9px;
+    background-color: green;
+    margin-right: 22px;
+}
+.name {
+    font-size: 18px;
+    color: #0F69FF;
+    margin-bottom: 10px;
+}
+.stock-exchange-page__topic {
+    height: 50%;
+}
 @media (max-width: 375px){
     .stock-exchange-page {
         width: 88%;

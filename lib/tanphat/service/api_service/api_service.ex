@@ -1,11 +1,13 @@
 defmodule Tanphat.ApiService do
   alias Tanphat.Errors
+  require Logger
 
   def glo_and_com_index do
     {:ok, %HTTPoison.Response{body: body}} =
       HTTPoison.get("https://tanphat.dev:8080/api/yahoo_finance/index")
 
     try do
+      Logger.debug("Data from Yahoo Finance: #{body}")
       Poison.decode!(body)
     rescue
       _ ->

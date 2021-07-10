@@ -50,7 +50,8 @@ defmodule Tanphat.MixProject do
       {:scrivener_ecto, "~> 2.7"},
       {:quantum, "~> 3.0"},
       {:httpoison, "~> 1.8"},
-      {:poison, "~> 4.0"}
+      {:poison, "~> 4.0"},
+      {:logger_file_backend, "~> 0.0.11"}
     ]
   end
 

@@ -1,0 +1,231 @@
+
+2021-07-10 19:23:32.769 [warn]  Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
+
+2021-07-10 19:23:32.965 [info]  Running TanphatWeb.Endpoint with cowboy 2.9.0 at 0.0.0.0:8000 (http)
+
+2021-07-10 19:23:32.965 [info]  Access TanphatWeb.Endpoint at http://localhost:8000
+
+2021-07-10 19:23:33.493 [debug] [:nonode@nohost][Elixir.Quantum.JobBroadcaster] Loading Initial Jobs from Config
+
+2021-07-10 19:24:16.081 [info]  GET /
+
+2021-07-10 19:24:16.107 [debug] Processing with Phoenix.LiveView.Plug.home_index/2
+  Parameters: %{}
+  Pipelines: [:browser]
+
+2021-07-10 19:24:16.159 [info]  Sent 200 in 78ms
+
+2021-07-10 19:24:17.233 [info]  CONNECTED TO Phoenix.LiveView.Socket in 0µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "GEsGHDh4XQEfFksyUwliEBQscDpjBhsJ_3DW_IjiOg3J5VZGpc6HN3rl", "_mounts" => "0", "_track_static" => %{"0" => "http://localhost:8000/css/app.css", "1" => "http://localhost:8000/js/app.js"}, "vsn" => "2.0.0"}
+
+2021-07-10 19:24:20.884 [debug] QUERY OK source="topic" db=31.0ms queue=32.0ms idle=1047.0ms
+SELECT count('*') FROM "topic" AS t0 WHERE (t0."topic_id" = $1) [3]
+
+2021-07-10 19:24:20.952 [debug] QUERY OK source="topic" db=15.0ms queue=32.0ms idle=1125.0ms
+SELECT t0."id", t0."title", t0."inner_html", t0."title_en", t0."inner_html_en", t0."url", t0."like", t0."dislike", t0."topic_id", t0."inserted_at", t0."updated_at" FROM "topic" AS t0 WHERE (t0."topic_id" = $1) ORDER BY t0."like" DESC, t0."updated_at" DESC LIMIT $2 OFFSET $3 [3, 3, 0]
+
+2021-07-10 19:24:21.499 [debug] Data from Yahoo Finance: {"snp_gsci_crude_oil_price_24h_change":"+1.69","euro50_index_price":"92.99","snp_wci_price_24h_change":"+4.76","snp_gsci_gas_per_price":"273.03","snp_gsci_light_energy_price":"482.36","snp_gsci_precious_metals_rate_24h_change":"+0.62%","euro50_index_rate_24h_change":"+0.43%","nikkei255_index_price":"27,940.42","snp_gsci_enhanced_commodity_ind_price_24h_change":"+4.20","__meta__":{"state":"loaded","source":"global_and_commodity_index","schema":"Elixir.GlobalAndCommodityIndex","prefix":null,"context":null},"dj_commodity_index_tr_price":"339.87","snp_wci_rate_24h_change":"+1.66%","snp_gsci_gold_price":"1,808.60","dj_commodity_index_tr_price_24h_change":"+3.71","dji_index_price":"34,870.16","dj_commodity_index_price_24h_change":"+9.09","nikkei255_index_price_24h_change":"-177.61","snp_gsci_tr_price_24h_change":"+36.24","nikkei255_index_rate_24h_change":"-0.63%","nasdaq100_index_price":"14,826.09","nasdaq100_index_price_24h_change":"+103.96","inserted_at":"2021-07-10T04:24:32","dj_commodity_index_tr_rate_24h_change":"+1.10%","dji_index_price_24h_change":"+448.23","snp_gsci_industrial_metals_price_24h_change":"+9.71","snp_wci_price":"291.84","snp_gsci_gold_rate_24h_change":"+0.47%","dj_commodity_index_price":"887.05","snp_gsci_enhanced_commodity_ind_rate_24h_change":"+1.43%","euro50_index_price_24h_change":"+0.40","snp_gsci_agri_price":"439.95","snp500_index_price_24h_change":"+48.73","dji_index_rate_24h_change":"+1.30%","ftse100_index_rate_24h_change":"+1.30%","snp_gsci_gas_per_price_24h_change":"+8.03","id":2,"snp_gsci_agri_price_24h_change":"-1.30","snp500_index_price":"4,369.55","snp_gsci_industrial_metals_rate_24h_change":"+2.14%","snp_gsci_gold_price_24h_change":"+8.40","updated_at":"2021-07-10T04:24:32","dj_commodity_index_rate_24h_change":"+1.04%","nasdaq100_index_rate_24h_change":"+0.71%","snp_gsci_light_energy_price_24h_change":"+4.28","snp500_index_rate_24h_change":"+1.13%","snp_gsci_light_energy_rate_24h_change":"+0.89%","snp_gsci_tr_rate_24h_change":"+1.42%","snp_gsci_crude_oil_rate_24h_change":"+2.32%","snp_gsci_precious_metals_price":"223.34","ftse100_index_price":"7,121.88","snp_gsci_agri_rate_24h_change":"-0.30%","snp_gsci_gas_per_rate_24h_change":"+3.03%","snp_gsci_crude_oil_price":"74.63","ftse100_index_price_24h_change":"+91.22","snp_gsci_industrial_metals_price":"463.30","snp_gsci_precious_metals_price_24h_change":"+1.37","snp_gsci_enhanced_commodity_ind_price":"297.81","snp_gsci_tr_price":"2,583.98"}
+
+2021-07-10 19:30:47.376 [warn]  Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
+
+2021-07-10 19:30:47.443 [info]  Running TanphatWeb.Endpoint with cowboy 2.9.0 at 0.0.0.0:8000 (http)
+
+2021-07-10 19:30:47.481 [info]  Access TanphatWeb.Endpoint at http://localhost:8000
+
+2021-07-10 19:30:47.638 [debug] [:nonode@nohost][Elixir.Quantum.JobBroadcaster] Loading Initial Jobs from Config
+
+2021-07-10 19:30:50.723 [debug] Live reload: priv/static/js/app.js
+
+2021-07-10 19:30:50.741 [debug] Live reload: priv/static/css/app.css
+
+2021-07-10 19:30:50.758 [debug] Live reload: priv/static/images/artical.png
+
+2021-07-10 19:30:50.772 [debug] Live reload: priv/static/images/bitcoin.png
+
+2021-07-10 19:30:50.783 [debug] Live reload: priv/static/images/api.png
+
+2021-07-10 19:30:50.786 [debug] Live reload: priv/static/images/code.png
+
+2021-07-10 19:30:50.789 [debug] Live reload: priv/static/js/app.js
+
+2021-07-10 19:30:50.790 [debug] Live reload: priv/static/images/books.png
+
+2021-07-10 19:30:50.792 [debug] Live reload: priv/static/images/stock_exchange.png
+
+2021-07-10 19:30:50.793 [debug] Live reload: priv/static/images/thumb-down.png
+
+2021-07-10 19:30:50.811 [debug] Live reload: priv/static/images/home.png
+
+2021-07-10 19:30:50.823 [debug] Live reload: priv/static/images/thumb-up.png
+
+2021-07-10 19:30:50.837 [debug] Live reload: priv/static/images/topic.png
+
+2021-07-10 19:30:50.871 [debug] Live reload: priv/static/css/app.css
+
+2021-07-10 19:30:50.877 [debug] Live reload: priv/static/images/artical.png
+
+2021-07-10 19:30:50.878 [debug] Live reload: priv/static/images/bitcoin.png
+
+2021-07-10 19:30:50.879 [debug] Live reload: priv/static/images/me.png
+
+2021-07-10 19:30:50.880 [debug] Live reload: priv/static/images/api.png
+
+2021-07-10 19:30:50.889 [debug] Live reload: priv/static/images/usa.png
+
+2021-07-10 19:30:50.890 [debug] Live reload: priv/static/images/code.png
+
+2021-07-10 19:30:50.891 [debug] Live reload: priv/static/images/books.png
+
+2021-07-10 19:30:50.892 [debug] Live reload: priv/static/images/stock_exchange.png
+
+2021-07-10 19:30:50.893 [debug] Live reload: priv/static/images/thumb-down.png
+
+2021-07-10 19:30:50.895 [debug] Live reload: priv/static/images/home.png
+
+2021-07-10 19:30:50.896 [debug] Live reload: priv/static/images/topic.png
+
+2021-07-10 19:30:50.909 [debug] Live reload: priv/static/images/thumb-up.png
+
+2021-07-10 19:30:50.913 [debug] Live reload: priv/static/images/utitlities.png
+
+2021-07-10 19:30:50.918 [debug] Live reload: priv/static/images/me.png
+
+2021-07-10 19:30:50.924 [debug] Live reload: priv/static/images/usa.png
+
+2021-07-10 19:30:50.925 [debug] Live reload: priv/static/images/vietnam.png
+
+2021-07-10 19:30:50.927 [debug] Live reload: priv/static/images/utitlities.png
+
+2021-07-10 19:30:50.928 [debug] Live reload: priv/static/images/bitcoin_shortcut.png
+
+2021-07-10 19:30:50.929 [debug] Live reload: priv/static/images/vietnam.png
+
+2021-07-10 19:30:50.933 [debug] Live reload: priv/static/images/bitcoin_shortcut.png
+
+2021-07-10 19:30:51.717 [info]  CONNECTED TO Phoenix.LiveView.Socket in 0µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "GEsGHDh4XQEfFksyUwliEBQscDpjBhsJ_3DW_IjiOg3J5VZGpc6HN3rl", "_mounts" => "0", "_track_static" => %{"0" => "http://localhost:8000/css/app.css", "1" => "http://localhost:8000/js/app.js"}, "vsn" => "2.0.0"}
+
+2021-07-10 19:30:52.037 [debug] QUERY OK source="topic" db=16.0ms decode=31.0ms queue=31.0ms idle=719.0ms
+SELECT count('*') FROM "topic" AS t0 WHERE (t0."topic_id" = $1) [3]
+
+2021-07-10 19:30:52.152 [debug] QUERY OK source="topic" db=31.0ms queue=31.0ms idle=875.0ms
+SELECT t0."id", t0."title", t0."inner_html", t0."title_en", t0."inner_html_en", t0."url", t0."like", t0."dislike", t0."topic_id", t0."inserted_at", t0."updated_at" FROM "topic" AS t0 WHERE (t0."topic_id" = $1) ORDER BY t0."like" DESC, t0."updated_at" DESC LIMIT $2 OFFSET $3 [3, 3, 0]
+
+2021-07-10 19:30:52.244 [info]  GET /css/app.css
+
+2021-07-10 19:30:52.244 [info]  GET /css/app.css
+
+2021-07-10 19:30:52.293 [info]  GET /stock-exchange
+
+2021-07-10 19:30:52.334 [info]  Sent 200 in 94ms
+
+2021-07-10 19:30:52.337 [info]  Sent 200 in 94ms
+
+2021-07-10 19:30:53.151 [debug] Data from Yahoo Finance: {"snp_gsci_crude_oil_price_24h_change":"+1.69","euro50_index_price":"92.99","snp_wci_price_24h_change":"+4.76","snp_gsci_gas_per_price":"273.03","snp_gsci_light_energy_price":"482.36","snp_gsci_precious_metals_rate_24h_change":"+0.62%","euro50_index_rate_24h_change":"+0.43%","nikkei255_index_price":"27,940.42","snp_gsci_enhanced_commodity_ind_price_24h_change":"+4.20","__meta__":{"state":"loaded","source":"global_and_commodity_index","schema":"Elixir.GlobalAndCommodityIndex","prefix":null,"context":null},"dj_commodity_index_tr_price":"339.87","snp_wci_rate_24h_change":"+1.66%","snp_gsci_gold_price":"1,808.60","dj_commodity_index_tr_price_24h_change":"+3.71","dji_index_price":"34,870.16","dj_commodity_index_price_24h_change":"+9.09","nikkei255_index_price_24h_change":"-177.61","snp_gsci_tr_price_24h_change":"+36.24","nikkei255_index_rate_24h_change":"-0.63%","nasdaq100_index_price":"14,826.09","nasdaq100_index_price_24h_change":"+103.96","inserted_at":"2021-07-10T04:24:32","dj_commodity_index_tr_rate_24h_change":"+1.10%","dji_index_price_24h_change":"+448.23","snp_gsci_industrial_metals_price_24h_change":"+9.71","snp_wci_price":"291.84","snp_gsci_gold_rate_24h_change":"+0.47%","dj_commodity_index_price":"887.05","snp_gsci_enhanced_commodity_ind_rate_24h_change":"+1.43%","euro50_index_price_24h_change":"+0.40","snp_gsci_agri_price":"439.95","snp500_index_price_24h_change":"+48.73","dji_index_rate_24h_change":"+1.30%","ftse100_index_rate_24h_change":"+1.30%","snp_gsci_gas_per_price_24h_change":"+8.03","id":2,"snp_gsci_agri_price_24h_change":"-1.30","snp500_index_price":"4,369.55","snp_gsci_industrial_metals_rate_24h_change":"+2.14%","snp_gsci_gold_price_24h_change":"+8.40","updated_at":"2021-07-10T04:24:32","dj_commodity_index_rate_24h_change":"+1.04%","nasdaq100_index_rate_24h_change":"+0.71%","snp_gsci_light_energy_price_24h_change":"+4.28","snp500_index_rate_24h_change":"+1.13%","snp_gsci_light_energy_rate_24h_change":"+0.89%","snp_gsci_tr_rate_24h_change":"+1.42%","snp_gsci_crude_oil_rate_24h_change":"+2.32%","snp_gsci_precious_metals_price":"223.34","ftse100_index_price":"7,121.88","snp_gsci_agri_rate_24h_change":"-0.30%","snp_gsci_gas_per_rate_24h_change":"+3.03%","snp_gsci_crude_oil_price":"74.63","ftse100_index_price_24h_change":"+91.22","snp_gsci_industrial_metals_price":"463.30","snp_gsci_precious_metals_price_24h_change":"+1.37","snp_gsci_enhanced_commodity_ind_price":"297.81","snp_gsci_tr_price":"2,583.98"}
+
+2021-07-10 19:30:53.321 [info]  GET /stock-exchange
+
+2021-07-10 19:30:53.495 [debug] Processing with Phoenix.LiveView.Plug.stock_exchange/2
+  Parameters: %{}
+  Pipelines: [:browser]
+
+2021-07-10 19:30:53.626 [debug] QUERY OK source="topic" db=47.0ms idle=485.0ms
+SELECT count('*') FROM "topic" AS t0 WHERE (t0."topic_id" = $1) [3]
+
+2021-07-10 19:30:53.691 [debug] QUERY OK source="topic" db=62.0ms idle=375.0ms
+SELECT t0."id", t0."title", t0."inner_html", t0."title_en", t0."inner_html_en", t0."url", t0."like", t0."dislike", t0."topic_id", t0."inserted_at", t0."updated_at" FROM "topic" AS t0 WHERE (t0."topic_id" = $1) ORDER BY t0."like" DESC, t0."updated_at" DESC LIMIT $2 OFFSET $3 [3, 3, 0]
+
+2021-07-10 19:30:53.726 [debug] Data from Yahoo Finance: {"snp_gsci_crude_oil_price_24h_change":"+1.69","euro50_index_price":"92.99","snp_wci_price_24h_change":"+4.76","snp_gsci_gas_per_price":"273.03","snp_gsci_light_energy_price":"482.36","snp_gsci_precious_metals_rate_24h_change":"+0.62%","euro50_index_rate_24h_change":"+0.43%","nikkei255_index_price":"27,940.42","snp_gsci_enhanced_commodity_ind_price_24h_change":"+4.20","__meta__":{"state":"loaded","source":"global_and_commodity_index","schema":"Elixir.GlobalAndCommodityIndex","prefix":null,"context":null},"dj_commodity_index_tr_price":"339.87","snp_wci_rate_24h_change":"+1.66%","snp_gsci_gold_price":"1,808.60","dj_commodity_index_tr_price_24h_change":"+3.71","dji_index_price":"34,870.16","dj_commodity_index_price_24h_change":"+9.09","nikkei255_index_price_24h_change":"-177.61","snp_gsci_tr_price_24h_change":"+36.24","nikkei255_index_rate_24h_change":"-0.63%","nasdaq100_index_price":"14,826.09","nasdaq100_index_price_24h_change":"+103.96","inserted_at":"2021-07-10T04:24:32","dj_commodity_index_tr_rate_24h_change":"+1.10%","dji_index_price_24h_change":"+448.23","snp_gsci_industrial_metals_price_24h_change":"+9.71","snp_wci_price":"291.84","snp_gsci_gold_rate_24h_change":"+0.47%","dj_commodity_index_price":"887.05","snp_gsci_enhanced_commodity_ind_rate_24h_change":"+1.43%","euro50_index_price_24h_change":"+0.40","snp_gsci_agri_price":"439.95","snp500_index_price_24h_change":"+48.73","dji_index_rate_24h_change":"+1.30%","ftse100_index_rate_24h_change":"+1.30%","snp_gsci_gas_per_price_24h_change":"+8.03","id":2,"snp_gsci_agri_price_24h_change":"-1.30","snp500_index_price":"4,369.55","snp_gsci_industrial_metals_rate_24h_change":"+2.14%","snp_gsci_gold_price_24h_change":"+8.40","updated_at":"2021-07-10T04:24:32","dj_commodity_index_rate_24h_change":"+1.04%","nasdaq100_index_rate_24h_change":"+0.71%","snp_gsci_light_energy_price_24h_change":"+4.28","snp500_index_rate_24h_change":"+1.13%","snp_gsci_light_energy_rate_24h_change":"+0.89%","snp_gsci_tr_rate_24h_change":"+1.42%","snp_gsci_crude_oil_rate_24h_change":"+2.32%","snp_gsci_precious_metals_price":"223.34","ftse100_index_price":"7,121.88","snp_gsci_agri_rate_24h_change":"-0.30%","snp_gsci_gas_per_rate_24h_change":"+3.03%","snp_gsci_crude_oil_price":"74.63","ftse100_index_price_24h_change":"+91.22","snp_gsci_industrial_metals_price":"463.30","snp_gsci_precious_metals_price_24h_change":"+1.37","snp_gsci_enhanced_commodity_ind_price":"297.81","snp_gsci_tr_price":"2,583.98"}
+
+2021-07-10 19:30:53.755 [info]  Sent 200 in 438ms
+
+2021-07-10 19:30:53.755 [info]  Sent 200 in 1469ms
+
+2021-07-10 19:30:53.905 [info]  GET /css/app.css
+
+2021-07-10 19:30:53.941 [info]  Sent 200 in 47ms
+
+2021-07-10 19:30:53.943 [info]  GET /js/app.js
+
+2021-07-10 19:30:53.959 [info]  Sent 200 in 16ms
+
+2021-07-10 19:30:54.175 [info]  GET /images/bitcoin_shortcut.png
+
+2021-07-10 19:30:54.176 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:54.296 [info]  GET /phoenix/live_reload/frame
+
+2021-07-10 19:30:54.296 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:54.975 [info]  CONNECTED TO Phoenix.LiveView.Socket in 0µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "Nz0XOy5XXi4fAgwuHjZ7DjAlChYdAl8_pEUpIfiFOstVxiCYTjLd076Z", "_mounts" => "0", "_track_static" => %{"0" => "http://localhost:8000/css/app.css", "1" => "http://localhost:8000/js/app.js"}, "vsn" => "2.0.0"}
+
+2021-07-10 19:30:55.072 [debug] QUERY OK source="topic" db=63.0ms idle=1734.0ms
+SELECT count('*') FROM "topic" AS t0 WHERE (t0."topic_id" = $1) [3]
+
+2021-07-10 19:30:55.143 [debug] QUERY OK source="topic" db=46.0ms idle=1844.0ms
+SELECT t0."id", t0."title", t0."inner_html", t0."title_en", t0."inner_html_en", t0."url", t0."like", t0."dislike", t0."topic_id", t0."inserted_at", t0."updated_at" FROM "topic" AS t0 WHERE (t0."topic_id" = $1) ORDER BY t0."like" DESC, t0."updated_at" DESC LIMIT $2 OFFSET $3 [3, 3, 0]
+
+2021-07-10 19:30:55.181 [debug] Data from Yahoo Finance: {"snp_gsci_crude_oil_price_24h_change":"+1.69","euro50_index_price":"92.99","snp_wci_price_24h_change":"+4.76","snp_gsci_gas_per_price":"273.03","snp_gsci_light_energy_price":"482.36","snp_gsci_precious_metals_rate_24h_change":"+0.62%","euro50_index_rate_24h_change":"+0.43%","nikkei255_index_price":"27,940.42","snp_gsci_enhanced_commodity_ind_price_24h_change":"+4.20","__meta__":{"state":"loaded","source":"global_and_commodity_index","schema":"Elixir.GlobalAndCommodityIndex","prefix":null,"context":null},"dj_commodity_index_tr_price":"339.87","snp_wci_rate_24h_change":"+1.66%","snp_gsci_gold_price":"1,808.60","dj_commodity_index_tr_price_24h_change":"+3.71","dji_index_price":"34,870.16","dj_commodity_index_price_24h_change":"+9.09","nikkei255_index_price_24h_change":"-177.61","snp_gsci_tr_price_24h_change":"+36.24","nikkei255_index_rate_24h_change":"-0.63%","nasdaq100_index_price":"14,826.09","nasdaq100_index_price_24h_change":"+103.96","inserted_at":"2021-07-10T04:24:32","dj_commodity_index_tr_rate_24h_change":"+1.10%","dji_index_price_24h_change":"+448.23","snp_gsci_industrial_metals_price_24h_change":"+9.71","snp_wci_price":"291.84","snp_gsci_gold_rate_24h_change":"+0.47%","dj_commodity_index_price":"887.05","snp_gsci_enhanced_commodity_ind_rate_24h_change":"+1.43%","euro50_index_price_24h_change":"+0.40","snp_gsci_agri_price":"439.95","snp500_index_price_24h_change":"+48.73","dji_index_rate_24h_change":"+1.30%","ftse100_index_rate_24h_change":"+1.30%","snp_gsci_gas_per_price_24h_change":"+8.03","id":2,"snp_gsci_agri_price_24h_change":"-1.30","snp500_index_price":"4,369.55","snp_gsci_industrial_metals_rate_24h_change":"+2.14%","snp_gsci_gold_price_24h_change":"+8.40","updated_at":"2021-07-10T04:24:32","dj_commodity_index_rate_24h_change":"+1.04%","nasdaq100_index_rate_24h_change":"+0.71%","snp_gsci_light_energy_price_24h_change":"+4.28","snp500_index_rate_24h_change":"+1.13%","snp_gsci_light_energy_rate_24h_change":"+0.89%","snp_gsci_tr_rate_24h_change":"+1.42%","snp_gsci_crude_oil_rate_24h_change":"+2.32%","snp_gsci_precious_metals_price":"223.34","ftse100_index_price":"7,121.88","snp_gsci_agri_rate_24h_change":"-0.30%","snp_gsci_gas_per_rate_24h_change":"+3.03%","snp_gsci_crude_oil_price":"74.63","ftse100_index_price_24h_change":"+91.22","snp_gsci_industrial_metals_price":"463.30","snp_gsci_precious_metals_price_24h_change":"+1.37","snp_gsci_enhanced_commodity_ind_price":"297.81","snp_gsci_tr_price":"2,583.98"}
+
+2021-07-10 19:30:55.222 [info]  GET /images/home.png
+
+2021-07-10 19:30:55.225 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.235 [info]  GET /images/usa.png
+
+2021-07-10 19:30:55.237 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.237 [info]  GET /images/vietnam.png
+
+2021-07-10 19:30:55.238 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.268 [info]  GET /images/code.png
+
+2021-07-10 19:30:55.269 [info]  GET /images/api.png
+
+2021-07-10 19:30:55.270 [info]  GET /images/stock_exchange.png
+
+2021-07-10 19:30:55.273 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.273 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.273 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.279 [info]  GET /images/artical.png
+
+2021-07-10 19:30:55.280 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.284 [info]  GET /images/utitlities.png
+
+2021-07-10 19:30:55.285 [info]  GET /images/books.png
+
+2021-07-10 19:30:55.286 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.287 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.337 [info]  GET /images/me.png
+
+2021-07-10 19:30:55.339 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.359 [info]  GET /images/topic.png
+
+2021-07-10 19:30:55.360 [info]  Sent 200 in 15ms
+
+2021-07-10 19:30:55.372 [info]  GET /images/thumb-up.png
+
+2021-07-10 19:30:55.373 [info]  GET /images/thumb-down.png
+
+2021-07-10 19:30:55.821 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.824 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.901 [info]  GET /images/bitcoin_shortcut.png
+
+2021-07-10 19:30:55.902 [info]  Sent 200 in 0µs

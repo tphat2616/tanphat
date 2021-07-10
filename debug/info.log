@@ -1,0 +1,119 @@
+
+2021-07-10 19:23:32.769 [warn]  Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
+
+2021-07-10 19:23:32.965 [info]  Running TanphatWeb.Endpoint with cowboy 2.9.0 at 0.0.0.0:8000 (http)
+
+2021-07-10 19:23:32.965 [info]  Access TanphatWeb.Endpoint at http://localhost:8000
+
+2021-07-10 19:24:16.081 [info]  GET /
+
+2021-07-10 19:24:16.159 [info]  Sent 200 in 78ms
+
+2021-07-10 19:24:17.233 [info]  CONNECTED TO Phoenix.LiveView.Socket in 0µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "GEsGHDh4XQEfFksyUwliEBQscDpjBhsJ_3DW_IjiOg3J5VZGpc6HN3rl", "_mounts" => "0", "_track_static" => %{"0" => "http://localhost:8000/css/app.css", "1" => "http://localhost:8000/js/app.js"}, "vsn" => "2.0.0"}
+
+2021-07-10 19:30:47.376 [warn]  Phoenix is unable to create symlinks. Phoenix' code reloader will run considerably faster if symlinks are allowed. On Windows, the lack of symlinks may even cause empty assets to be served. Luckily, you can address this issue by starting your Windows terminal at least once with "Run as Administrator" and then running your Phoenix application.
+
+2021-07-10 19:30:47.443 [info]  Running TanphatWeb.Endpoint with cowboy 2.9.0 at 0.0.0.0:8000 (http)
+
+2021-07-10 19:30:47.481 [info]  Access TanphatWeb.Endpoint at http://localhost:8000
+
+2021-07-10 19:30:51.717 [info]  CONNECTED TO Phoenix.LiveView.Socket in 0µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "GEsGHDh4XQEfFksyUwliEBQscDpjBhsJ_3DW_IjiOg3J5VZGpc6HN3rl", "_mounts" => "0", "_track_static" => %{"0" => "http://localhost:8000/css/app.css", "1" => "http://localhost:8000/js/app.js"}, "vsn" => "2.0.0"}
+
+2021-07-10 19:30:52.244 [info]  GET /css/app.css
+
+2021-07-10 19:30:52.244 [info]  GET /css/app.css
+
+2021-07-10 19:30:52.293 [info]  GET /stock-exchange
+
+2021-07-10 19:30:52.334 [info]  Sent 200 in 94ms
+
+2021-07-10 19:30:52.337 [info]  Sent 200 in 94ms
+
+2021-07-10 19:30:53.321 [info]  GET /stock-exchange
+
+2021-07-10 19:30:53.755 [info]  Sent 200 in 438ms
+
+2021-07-10 19:30:53.755 [info]  Sent 200 in 1469ms
+
+2021-07-10 19:30:53.905 [info]  GET /css/app.css
+
+2021-07-10 19:30:53.941 [info]  Sent 200 in 47ms
+
+2021-07-10 19:30:53.943 [info]  GET /js/app.js
+
+2021-07-10 19:30:53.959 [info]  Sent 200 in 16ms
+
+2021-07-10 19:30:54.175 [info]  GET /images/bitcoin_shortcut.png
+
+2021-07-10 19:30:54.176 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:54.296 [info]  GET /phoenix/live_reload/frame
+
+2021-07-10 19:30:54.296 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:54.975 [info]  CONNECTED TO Phoenix.LiveView.Socket in 0µs
+  Transport: :websocket
+  Serializer: Phoenix.Socket.V2.JSONSerializer
+  Parameters: %{"_csrf_token" => "Nz0XOy5XXi4fAgwuHjZ7DjAlChYdAl8_pEUpIfiFOstVxiCYTjLd076Z", "_mounts" => "0", "_track_static" => %{"0" => "http://localhost:8000/css/app.css", "1" => "http://localhost:8000/js/app.js"}, "vsn" => "2.0.0"}
+
+2021-07-10 19:30:55.222 [info]  GET /images/home.png
+
+2021-07-10 19:30:55.225 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.235 [info]  GET /images/usa.png
+
+2021-07-10 19:30:55.237 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.237 [info]  GET /images/vietnam.png
+
+2021-07-10 19:30:55.238 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.268 [info]  GET /images/code.png
+
+2021-07-10 19:30:55.269 [info]  GET /images/api.png
+
+2021-07-10 19:30:55.270 [info]  GET /images/stock_exchange.png
+
+2021-07-10 19:30:55.273 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.273 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.273 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.279 [info]  GET /images/artical.png
+
+2021-07-10 19:30:55.280 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.284 [info]  GET /images/utitlities.png
+
+2021-07-10 19:30:55.285 [info]  GET /images/books.png
+
+2021-07-10 19:30:55.286 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.287 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.337 [info]  GET /images/me.png
+
+2021-07-10 19:30:55.339 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.359 [info]  GET /images/topic.png
+
+2021-07-10 19:30:55.360 [info]  Sent 200 in 15ms
+
+2021-07-10 19:30:55.372 [info]  GET /images/thumb-up.png
+
+2021-07-10 19:30:55.373 [info]  GET /images/thumb-down.png
+
+2021-07-10 19:30:55.821 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.824 [info]  Sent 200 in 0µs
+
+2021-07-10 19:30:55.901 [info]  GET /images/bitcoin_shortcut.png
+
+2021-07-10 19:30:55.902 [info]  Sent 200 in 0µs

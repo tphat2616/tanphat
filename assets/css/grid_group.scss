@@ -6,61 +6,6 @@
     grid-gap: 0px;
     grid-template-columns: repeat(4, 25%);
     display: grid;
-    .grid-item-1 {
-        flex: 1 1 auto;
-        padding: 15px;
-        margin: 20px 20px 0 0;
-        background: linear-gradient(
-            325deg
-            ,#42CFFF , #EC87FF  90%);
-        border-radius: 10px;
-        text-decoration: none;
-        color: #444444
-    }
-    .grid-item-2 {
-        flex: 1 1 auto;
-        padding: 15px;
-        margin: 20px 20px 0 0;
-        background: linear-gradient(
-            325deg
-            ,#fc4a1a , #f7b733  90%);
-        border-radius: 10px;
-        text-decoration: none;
-        color: #444444
-    }
-    .grid-item-2-disable {
-        pointer-events: none;
-        cursor: default;
-        flex: 1 1 auto;
-        padding: 15px;
-        margin: 20px 20px 0 0;
-        background: #dddddd;
-        border-radius: 10px;
-        text-decoration: none;
-        color: #444444
-    }
-    .grid-item-3 {
-        flex: 1 1 auto;
-        padding: 15px;
-        margin: 20px 20px 0 0;
-        background: linear-gradient(
-            325deg
-            ,#10B839 , #FF0F10  90%);
-        border-radius: 10px;
-        text-decoration: none;
-        color: #444444
-    }
-    .grid-item-4 {
-        flex: 1 1 auto;
-        padding: 15px;
-        margin: 20px 20px 0 0;
-        background: linear-gradient(
-            325deg
-            ,#009FFF , #ec2F4B  90%);
-        border-radius: 10px;
-        text-decoration: none;
-        color: white
-    }
     .grid-item-5 {
         flex: 1 1 auto;
         padding: 15px;
@@ -111,6 +56,17 @@
         text-decoration: none;
         color: white
     }
+    .grid-item-1-disable {
+        pointer-events: none;
+        cursor: default;
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: #dddddd;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white
+    }
     .grid-item-2 {
         flex: 1 1 auto;
         padding: 15px;
@@ -144,6 +100,17 @@
         text-decoration: none;
         color: white
     }
+    .grid-item-3-disable {
+        pointer-events: none;
+        cursor: default;
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: #dddddd;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white
+    }
     .grid-item-4 {
         flex: 1 1 auto;
         padding: 15px;
@@ -155,6 +122,17 @@
         text-decoration: none;
         color: white
     }
+    .grid-item-4-disable {
+        pointer-events: none;
+        cursor: default;
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: #dddddd;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white
+    }
     .grid-item-5 {
         flex: 1 1 auto;
         padding: 15px;
@@ -162,6 +140,17 @@
         background: linear-gradient(
             325deg
             ,#2193b0 , #6dd5ed  90%);
+        border-radius: 10px;
+        text-decoration: none;
+        color: white
+    }
+    .grid-item-5-disable {
+        pointer-events: none;
+        cursor: default;
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: #dddddd;
         border-radius: 10px;
         text-decoration: none;
         color: white

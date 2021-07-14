@@ -8,6 +8,6 @@ defmodule TanphatWeb.ProgramingLanguages.ProgramingLanguage do
   end
 
   defp fetch_blog(socket, params) do
-    assign(socket, paginator: TopicService.list_blog(1, params))
+    assign(socket, paginator: TopicService.list_blog(1, params), category: 1)
   end
 end

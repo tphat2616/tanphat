@@ -37,12 +37,60 @@
     cursor: pointer;
     color: currentColor;
 }
-.btn-primary {
+.btn-primary-1 {
     font-size: 18px;
     line-height: 18px;
     color: #444444;
-    background: #F79413;
-    border-color: #F79413;
+    background: linear-gradient(
+        325deg
+        ,#42CFFF , #EC87FF  90%);
+    border-color: inear-gradient(
+        325deg
+        ,#42CFFF , #EC87FF  90%);
+}
+.btn-primary-2 {
+    font-size: 18px;
+    line-height: 18px;
+    color: #444444;
+    background: linear-gradient(
+        325deg
+        ,#fc4a1a , #f7b733  90%);
+    border-color: linear-gradient(
+        325deg
+        ,#fc4a1a , #f7b733  90%);
+}
+.btn-primary-3 {
+    font-size: 18px;
+    line-height: 18px;
+    color: #444444;
+    background: linear-gradient(
+        325deg
+       ,#FF0F10 ,#10B839 90%);
+    border-color: linear-gradient(
+        325deg
+       ,#FF0F10 ,#10B839 90%);
+}
+.btn-primary-4 {
+    font-size: 18px;
+    line-height: 18px;
+    color: #444444;
+    background: linear-gradient(
+        325deg
+        ,#009FFF , #ec2F4B  90%);
+    border-color: linear-gradient(
+        325deg
+        ,#009FFF , #ec2F4B  90%);
+}
+.btn-primary-7 {
+    font-size: 18px;
+    line-height: 18px;
+    color: #444444;
+    background: linear-gradient(
+        325deg
+        ,#2193b0 , #6dd5ed  90%);
+    border-color: linear-gradient(
+        325deg
+        ,#2193b0 , #6dd5ed  90%);
 }
 .btn-text-primary {
     font-size: 18px;

@@ -97,6 +97,7 @@
         <%= live_component @socket, TanphatWeb.SharedLive.Paginator,
             route_action: :stock_exchange,
             query: Map.merge(@query, %{"replace" => true}),
-            paginator: @paginator %>
+            paginator: @paginator,
+            category: @category %>
     </div>
 </div>

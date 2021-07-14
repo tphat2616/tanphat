@@ -6,5 +6,6 @@
     <%= live_component @socket, TanphatWeb.SharedLive.Paginator,
         route_action: :cryptocurrency,
         query: Map.merge(@query, %{"replace" => true}),
-        paginator: @paginator %>
+        paginator: @paginator,
+        category: @category %>
 </div>

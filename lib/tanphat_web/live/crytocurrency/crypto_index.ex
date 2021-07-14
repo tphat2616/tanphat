@@ -8,6 +8,6 @@ defmodule TanphatWeb.Cryptocurrency.CryptoIndex do
   end
 
   defp fetch_blog(socket, params) do
-    assign(socket, paginator: TopicService.list_blog(2, params))
+    assign(socket, paginator: TopicService.list_blog(2, params), category: 2)
   end
 end

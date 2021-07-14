@@ -8,6 +8,6 @@ defmodule TanphatWeb.APICollection.APIPage do
   end
 
   defp fetch_blog(socket, params) do
-    assign(socket, paginator: TopicService.list_blog(4, params))
+    assign(socket, paginator: TopicService.list_blog(4, params), category: 4)
   end
 end

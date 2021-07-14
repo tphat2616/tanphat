@@ -12,13 +12,51 @@ defmodule TanphatWeb.SharedLive.Paginator do
           id: "page-first",
           to: compute_url(@socket, assigns, 1),
           class: "btn-icon" %>
-      
-        <%= for page <- page_list(@paginator) do %>
-          <%= live_patch page, 
-            id: "page-##{page}",
-            to: compute_url(@socket, assigns, page),
-            class: "btn-icon #{if page === @paginator.page_number, do: "btn-primary disabled", else: "btn-text-primary"}" %>
-            <% end %>
+
+        <%= cond do %>
+          <% @category == 1 -> %>
+            <%= for page <- page_list(@paginator) do %>
+              <%= live_patch page, 
+                id: "page-##{page}",
+                to: compute_url(@socket, assigns, page),
+                class: "btn-icon #{if page === @paginator.page_number, do: "btn-primary-1 disabled", else: "btn-text-primary"}" %>
+                <% end %>
+          <% @category == 2 -> %>
+            <%= for page <- page_list(@paginator) do %>
+              <%= live_patch page, 
+                id: "page-##{page}",
+                to: compute_url(@socket, assigns, page),
+                class: "btn-icon #{if page === @paginator.page_number, do: "btn-primary-2 disabled", else: "btn-text-primary"}" %>
+                <% end %>
+          <% @category == 3 -> %>
+            <%= for page <- page_list(@paginator) do %>
+              <%= live_patch page, 
+                id: "page-##{page}",
+                to: compute_url(@socket, assigns, page),
+                class: "btn-icon #{if page === @paginator.page_number, do: "btn-primary-3 disabled", else: "btn-text-primary"}" %>
+                <% end %>
+          <% @category == 4 -> %>
+            <%= for page <- page_list(@paginator) do %>
+              <%= live_patch page, 
+                id: "page-##{page}",
+                to: compute_url(@socket, assigns, page),
+                class: "btn-icon #{if page === @paginator.page_number, do: "btn-primary-4 disabled", else: "btn-text-primary"}" %>
+                <% end %>
+          <% @category == 7 -> %>
+            <%= for page <- page_list(@paginator) do %>
+              <%= live_patch page, 
+                id: "page-##{page}",
+                to: compute_url(@socket, assigns, page),
+                class: "btn-icon #{if page === @paginator.page_number, do: "btn-primary-7 disabled", else: "btn-text-primary"}" %>
+                <% end %>
+          <% true -> %>
+              <%= for page <- page_list(@paginator) do %>
+                <%= live_patch page, 
+                  id: "page-##{page}",
+                  to: compute_url(@socket, assigns, page),
+                  class: "btn-icon #{if page === @paginator.page_number, do: "btn-primary disabled", else: "btn-text-primary"}" %>
+                  <% end %>
+        <% end %>
             
         <%= live_patch ">>", 
           id: "page-last",

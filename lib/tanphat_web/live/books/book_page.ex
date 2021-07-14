@@ -8,6 +8,6 @@ defmodule TanphatWeb.Books.BookPage do
   end
 
   defp fetch_blog(socket, params) do
-    assign(socket, paginator: TopicService.list_blog(7, params))
+    assign(socket, paginator: TopicService.list_blog(7, params), category: 7)
   end
 end

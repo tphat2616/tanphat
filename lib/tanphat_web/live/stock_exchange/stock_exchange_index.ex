@@ -11,7 +11,7 @@ defmodule TanphatWeb.StockExchange.StockExchangeIndex do
   end
 
   defp fetch_blog(socket, params) do
-    assign(socket, paginator: TopicService.list_blog(3, params))
+    assign(socket, paginator: TopicService.list_blog(3, params), category: 3)
   end
 
   def assign_glo_and_com_index(socket) do

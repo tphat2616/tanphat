@@ -90,7 +90,8 @@ defmodule TanphatWeb do
       import TanphatWeb.ErrorHelpers
       import TanphatWeb.Gettext
       alias TanphatWeb.Router.Helpers, as: Routes
-      alias TanphatWeb.Printer
+      alias TanphatWeb.UrlHelpers, as: URL
+      alias TanphatWeb.Printer, as: Printer
     end
   end
 

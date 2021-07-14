@@ -28,6 +28,17 @@
         text-decoration: none;
         color: #444444
     }
+    .grid-item-2-disable {
+        pointer-events: none;
+        cursor: default;
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: #dddddd;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #444444
+    }
     .grid-item-3 {
         flex: 1 1 auto;
         padding: 15px;
@@ -107,6 +118,17 @@
         background: linear-gradient(
             325deg
             ,#fc4a1a , #f7b733  90%);
+        border-radius: 10px;
+        text-decoration: none;
+        color: white
+    }
+    .grid-item-2-disable {
+        pointer-events: none;
+        cursor: default;
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: #dddddd;
         border-radius: 10px;
         text-decoration: none;
         color: white

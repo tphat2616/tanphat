@@ -17,28 +17,29 @@ config :tanphat, Tanphat.Scheduler,
     # {"* * * * *", {Tanphat.ApiService, :glo_and_com_index, []}}
     # {{:cron, "* * * * *"},     {Heartbeat, :send, []}},
   ]
-config :logger,
-  backends: [
-    {LoggerFileBackend, :info_log},
-    {LoggerFileBackend, :debug_log},
-    {LoggerFileBackend, :error_log}
-  ]
 
-config :logger, :info_log,
-  path: Path.expand("debug/info.log"),
-  format: "\n$date $time $metadata[$level] $levelpad$message\n",
-  level: :info,
-  metadata: [:client_ip]
+# config :logger,
+#   backends: [
+#     {LoggerFileBackend, :info_log},
+#     {LoggerFileBackend, :debug_log},
+#     {LoggerFileBackend, :error_log}
+#   ]
 
-config :logger, :debug_log,
-  path: Path.expand("debug/debug.log"),
-  format: "\n$date $time $metadata[$level] $levelpad$message\n",
-  level: :debug
+# config :logger, :info_log,
+#   path: Path.expand("debug/info.log"),
+#   format: "\n$date $time $metadata[$level] $levelpad$message\n",
+#   level: :info,
+#   metadata: [:client_ip]
 
-config :logger, :error_log,
-  path: Path.expand("debug/error.log"),
-  format: "\n$date $time $metadata[$level] $levelpad$message\n",
-  level: :error
+# config :logger, :debug_log,
+#   path: Path.expand("debug/debug.log"),
+#   format: "\n$date $time $metadata[$level] $levelpad$message\n",
+#   level: :debug
+
+# config :logger, :error_log,
+#   path: Path.expand("debug/error.log"),
+#   format: "\n$date $time $metadata[$level] $levelpad$message\n",
+#   level: :error
 
 # Configures the endpoint
 config :tanphat, TanphatWeb.Endpoint,

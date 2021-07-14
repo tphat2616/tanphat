@@ -10,7 +10,9 @@ defmodule Topic do
     :url,
     :like,
     :dislike,
-    :topic_id
+    :topic_id,
+    :description,
+    :release?
   ]
 
   @required_key []
@@ -24,6 +26,8 @@ defmodule Topic do
     field :like, :integer
     field :dislike, :integer
     field :topic_id, :integer
+    field :description, :string
+    field :release?, :boolean, default: false
 
     timestamps()
   end

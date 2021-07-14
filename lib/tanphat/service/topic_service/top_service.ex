@@ -15,4 +15,12 @@ defmodule Tanphat.TopicService do
     |> order_by(desc: :updated_at)
     |> Repo.paginate(opts)
   end
+
+  def get_blog(id) when is_integer(id) do
+    Repo.get_by(Topic, id: id)
+  end
+
+  def get_blog(_id) do
+    %Topic{}
+  end
 end

@@ -20,6 +20,12 @@ defmodule TanphatWeb.PageRouter do
         live_action: :cryptocurrency
       ],
       [
+        component: TanphatWeb.Cryptocurrency.Show,
+        id: "blog-crypto-page",
+        title: "Crypto Blogs",
+        live_action: :blog_show
+      ],
+      [
         component: TanphatWeb.StockExchange.StockExchangeIndex,
         id: "stock-exchange",
         title: "Stock Exchange",

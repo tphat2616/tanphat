@@ -5,6 +5,34 @@
     width: 1283px;
     height: 100%;
 }
+.blog-crypto {
+    position: fixed;
+    right: 0;
+    top: 25px;
+    overflow: scroll;
+    height: 557px;
+    width: 1250px;
+    padding-right: 25px;
+    line-height: 1.4;
+}
+.blog-crypto__content {
+    a{
+        color: red;
+        text-decoration: none;
+    }
+}
+.center-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.center-img-special{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
 @media (max-width: 375px){
     .crypto-page {
         width: 88%;

@@ -1,4 +1,4 @@
-defmodule TanphatWeb.Crytocurrency.CrytoIndex do
+defmodule TanphatWeb.Cryptocurrency.CryptoIndex do
   use TanphatWeb, :live_component
   alias Tanphat.TopicService
 

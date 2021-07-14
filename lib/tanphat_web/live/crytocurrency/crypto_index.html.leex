@@ -1,10 +1,10 @@
-<div class="cryto-page" id="<%= @id %>" onclick>
+<div class="crypto-page" id="<%= @id %>" onclick>
     <section class="recipe-25pls">
-        <%= live_component @socket, TanphatWeb.BlogCollection.BlogCryto,
+        <%= live_component @socket, TanphatWeb.BlogCollection.BlogCrypto,
             blogs: @paginator.entries %>
     </section>
     <%= live_component @socket, TanphatWeb.SharedLive.Paginator,
-        route_action: :crytocurrency,
+        route_action: :cryptocurrency,
         query: Map.merge(@query, %{"replace" => true}),
         paginator: @paginator %>
 </div>

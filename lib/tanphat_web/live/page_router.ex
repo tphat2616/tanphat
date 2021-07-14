@@ -14,10 +14,10 @@ defmodule TanphatWeb.PageRouter do
         live_action: :programing_language
       ],
       [
-        component: TanphatWeb.Crytocurrency.CrytoIndex,
-        id: "cryto-page",
-        title: "Crytocurrencies",
-        live_action: :crytocurrency
+        component: TanphatWeb.Cryptocurrency.CryptoIndex,
+        id: "crypto-page",
+        title: "Cryptocurrencies",
+        live_action: :cryptocurrency
       ],
       [
         component: TanphatWeb.StockExchange.StockExchangeIndex,

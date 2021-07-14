@@ -19,7 +19,7 @@ defmodule TanphatWeb.Router do
 
     live "/", PageLive, :home_index
     live "/programing-languages", PageLive, :programing_language
-    live "/crytocurrencies", PageLive, :crytocurrency
+    live "/cryptocurrencies", PageLive, :cryptocurrency
     live "/stock-exchange", PageLive, :stock_exchange
     live "/api-collections", PageLive, :api
     live "/scientific-artical", PageLive, :artical

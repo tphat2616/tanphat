@@ -26,7 +26,8 @@ defmodule TanphatWeb.Router do
     live "/ultilities", PageLive, :ultility
     live "/books", PageLive, :book
     live "/about-me", PageLive, :my_site
-    live("/cryptocurrencies/:id", PageLive, :blog_show)
+    live("/cryptocurrencies/:id", PageLive, :cryto_blog_show)
+    live("/stock-exchange/:id", PageLive, :stock_blog_show)
   end
 
   scope "/", TanphatWeb do

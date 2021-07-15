@@ -1,7 +1,7 @@
 <div class="grid-group">
     <%= for blog <- assigns[:blogs] do %>
         <%= if blog.release? == true do %>
-            <%= live_patch class: "grid-item-3", to: Routes.page_path(@socket, :stock_exchange ) do %>
+            <%= live_patch class: "grid-item-3", to: Routes.page_path(@socket, :stock_blog_show, blog.id) do %>
                 <div >
                     <div>
                         <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />
@@ -18,7 +18,7 @@
                 </div>
             <% end %>
         <% else  %>
-            <%= live_patch class: "grid-item-3-disable", to: Routes.page_path(@socket, :stock_exchange ) do %>
+            <%= live_patch class: "grid-item-3-disable", to: Routes.page_path(@socket, :stock_blog_show, blog.id) do %>
                 <div >
                     <div>
                         <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />

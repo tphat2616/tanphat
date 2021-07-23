@@ -6,7 +6,7 @@
     grid-gap: 0px;
     grid-template-columns: repeat(4, 25%);
     display: grid;
-    .grid-item-5 {
+    .grid-item-7 {
         flex: 1 1 auto;
         padding: 15px;
         margin: 20px 20px 0 0;
@@ -45,6 +45,17 @@
     grid-gap: 0px;
     grid-template-columns: repeat(3, 33.33%);
     display: grid;
+    .grid-item-disable {
+        pointer-events: none;
+        cursor: default;
+        flex: 1 1 auto;
+        padding: 15px;
+        margin: 20px 20px 0 0;
+        background: #dddddd;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white
+    }
     .grid-item-1 {
         flex: 1 1 auto;
         padding: 15px;
@@ -52,17 +63,6 @@
         background: linear-gradient(
             325deg
             ,#42CFFF , #EC87FF  90%);
-        border-radius: 10px;
-        text-decoration: none;
-        color: white
-    }
-    .grid-item-1-disable {
-        pointer-events: none;
-        cursor: default;
-        flex: 1 1 auto;
-        padding: 15px;
-        margin: 20px 20px 0 0;
-        background: #dddddd;
         border-radius: 10px;
         text-decoration: none;
         color: white
@@ -78,17 +78,6 @@
         text-decoration: none;
         color: white
     }
-    .grid-item-2-disable {
-        pointer-events: none;
-        cursor: default;
-        flex: 1 1 auto;
-        padding: 15px;
-        margin: 20px 20px 0 0;
-        background: #dddddd;
-        border-radius: 10px;
-        text-decoration: none;
-        color: white
-    }
     .grid-item-3 {
         flex: 1 1 auto;
         padding: 15px;
@@ -96,17 +85,6 @@
         background: linear-gradient(
             325deg
            ,#FF0F10 ,#10B839 90%);
-        border-radius: 10px;
-        text-decoration: none;
-        color: white
-    }
-    .grid-item-3-disable {
-        pointer-events: none;
-        cursor: default;
-        flex: 1 1 auto;
-        padding: 15px;
-        margin: 20px 20px 0 0;
-        background: #dddddd;
         border-radius: 10px;
         text-decoration: none;
         color: white
@@ -122,35 +100,24 @@
         text-decoration: none;
         color: white
     }
-    .grid-item-4-disable {
-        pointer-events: none;
-        cursor: default;
-        flex: 1 1 auto;
-        padding: 15px;
-        margin: 20px 20px 0 0;
-        background: #dddddd;
-        border-radius: 10px;
-        text-decoration: none;
-        color: white
-    }
     .grid-item-5 {
         flex: 1 1 auto;
         padding: 15px;
         margin: 20px 20px 0 0;
         background: linear-gradient(
             325deg
-            ,#2193b0 , #6dd5ed  90%);
+            , #F24976,#69CDFF  90%);
         border-radius: 10px;
         text-decoration: none;
         color: white
     }
-    .grid-item-5-disable {
-        pointer-events: none;
-        cursor: default;
+    .grid-item-6 {
         flex: 1 1 auto;
         padding: 15px;
         margin: 20px 20px 0 0;
-        background: #dddddd;
+        background: linear-gradient(
+            325deg
+            , #FFD401,#454545  90%);
         border-radius: 10px;
         text-decoration: none;
         color: white

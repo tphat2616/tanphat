@@ -1,0 +1,8 @@
+<div class="blog-crypto">
+    <div>
+        <h1 style="text-align: center"><%= Printer.translate_data(@blog, :description) %></h1>
+    </div>
+    <br>
+    <div class="blog-crypto__content">
+        <%= raw (Printer.translate_data(@blog, :inner_html)) %>
+</div>

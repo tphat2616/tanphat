@@ -56,10 +56,22 @@ defmodule TanphatWeb.PageRouter do
         live_action: :artical
       ],
       [
+        component: TanphatWeb.Artical.Show,
+        id: "blog-artical-page",
+        title: "Scientific Artical Blogs",
+        live_action: :artical_blog_show
+      ],
+      [
         component: TanphatWeb.Ultilities.UltilityPage,
         id: "ultility",
         title: "Ultilities",
         live_action: :ultility
+      ],
+      [
+        component: TanphatWeb.Ultilities.Show,
+        id: "blog-ultility-page",
+        title: "Ultility",
+        live_action: :ultility_blog_show
       ],
       [
         component: TanphatWeb.Books.BookPage,

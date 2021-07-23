@@ -18,7 +18,7 @@
                 </div>
             <% end %>
         <% else  %>
-            <%= live_patch class: "grid-item-2-disable", to: Routes.page_path(@socket, :cryto_blog_show, blog.id) do %>
+            <%= live_patch class: "grid-item-disable", to: Routes.page_path(@socket, :cryto_blog_show, blog.id) do %>
                 <div >
                     <div>
                         <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />

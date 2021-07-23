@@ -1,1 +1,11 @@
-<%= render TanphatWeb.ErrorView, "coming_soon.html", id: @id, conn: @socket %>
+<div class="api-page" id="<%= @id %>" onclick>
+    <section class="recipe-25pls">
+        <%= live_component @socket, TanphatWeb.BlogCollection.BlogArtical,
+            blogs: @paginator.entries %>
+    </section>
+    <%= live_component @socket, TanphatWeb.SharedLive.Paginator,
+        route_action: :artical,
+        query: Map.merge(@query, %{"replace" => true}),
+        paginator: @paginator,
+        category: @category %>
+</div>

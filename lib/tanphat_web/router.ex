@@ -28,6 +28,7 @@ defmodule TanphatWeb.Router do
     live "/about-me", PageLive, :my_site
     live("/cryptocurrencies/:id", PageLive, :cryto_blog_show)
     live("/stock-exchange/:id", PageLive, :stock_blog_show)
+    live("/api-collections/:id", PageLive, :api_blog_show)
   end
 
   scope "/", TanphatWeb do

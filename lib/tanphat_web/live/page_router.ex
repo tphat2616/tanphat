@@ -44,6 +44,12 @@ defmodule TanphatWeb.PageRouter do
         live_action: :api
       ],
       [
+        component: TanphatWeb.APICollection.Show,
+        id: "blog-api-page",
+        title: "API Blogs",
+        live_action: :api_blog_show
+      ],
+      [
         component: TanphatWeb.Artical.ArticalPage,
         id: "artical",
         title: "Scientific Artical",

@@ -14,6 +14,12 @@ defmodule TanphatWeb.PageRouter do
         live_action: :programing_language
       ],
       [
+        component: TanphatWeb.ProgramingLanguages.Show,
+        id: "blog-code-page",
+        title: "Programing Languages Blogs",
+        live_action: :programing_language_blog_show
+      ],
+      [
         component: TanphatWeb.Cryptocurrency.CryptoIndex,
         id: "crypto-page",
         title: "Cryptocurrencies",

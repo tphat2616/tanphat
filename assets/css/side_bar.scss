@@ -11,14 +11,16 @@
         ,#10B839 , #FF0F10  90%);
     // border-radius: 0 10px 10px 0;
 }
+.icon-toolbar {
+    margin-top: 20px;
+}
 @media only screen and (max-width: 375px) {
     .side_bar {
         width: 0;
-        height: 0;
     }
-}
-.icon-toolbar {
-    margin-top: 20px;
+    .icon-toolbar {
+        visibility: hidden;
+    }
 }
 .icon-toolbar_element {
     width: 65%;

@@ -6,6 +6,7 @@
     grid-gap: 0px;
     grid-template-columns: repeat(4, 25%);
     display: grid;
+    padding-left: 20px;
     .grid-item-7 {
         flex: 1 1 auto;
         padding: 15px;
@@ -45,6 +46,7 @@
     grid-gap: 0px;
     grid-template-columns: repeat(3, 33.33%);
     display: grid;
+    padding-left: 20px;
     .grid-item-disable {
         pointer-events: none;
         cursor: default;

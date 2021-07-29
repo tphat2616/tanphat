@@ -42,6 +42,7 @@
 @media (max-width: 375px){
     .stock-exchange-page {
         width: 100%;
+        overflow: scroll;
     }
     .stock-exchange-page__index {
         visibility: hidden;

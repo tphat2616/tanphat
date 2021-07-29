@@ -40,3 +40,22 @@
     transform: perspective(200px) rotateY(35deg);
     transition-duration: 1s;
 }
+.multiple-languages{
+    display: inherit;
+    position: fixed;
+    right: 0;
+}
+@media (max-width: 375px){
+    .home{
+        width: 20px;
+        height: 20px;
+        padding-left: 20px;
+        padding-top: 3px;
+    }
+    .multiple-languages{
+        display: inherit;
+        position: fixed;
+        right: 0;
+        padding-top: 3px;
+    }
+}

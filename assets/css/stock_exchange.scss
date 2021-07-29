@@ -41,19 +41,20 @@
 }
 @media (max-width: 375px){
     .stock-exchange-page {
-        width: 95.5%;
-        overflow: scroll;
-    }
-    .stock-exchange-page__index {
-        visibility: hidden;
-        height: 0;
-        margin-top: 0;
-    }
-    .cross-line{
-        visibility: hidden;
-        height: 0;
+        width: 100%;
+        overflow-x: scroll;
     }
     .stock-exchange-page__topic {
         height: 100%;
+    }
+    .cross-line{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .stock-exchange-page__index {
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
 }

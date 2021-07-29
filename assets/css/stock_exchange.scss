@@ -43,6 +43,18 @@
 }
 @media (max-width: 375px){
     .stock-exchange-page {
-        width: 88%;
+        width: 95%;
+    }
+    .stock-exchange-page__index {
+        visibility: hidden;
+        height: 0;
+        margin-top: 0;
+    }
+    .cross-line{
+        visibility: hidden;
+        height: 0;
+    }
+    .stock-exchange-page__topic {
+        height: 100%;
     }
 }

@@ -109,4 +109,10 @@
     .loading-screen {
         width: 100%;
     }
+    .paginator {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 40px;
+    }
 }

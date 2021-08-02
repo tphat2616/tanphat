@@ -5,6 +5,12 @@
     width: 95.5%;
     height: 100%;
 }
+@media (max-width: 768px){
+    .programing-language-page {
+        width: 92%;
+        overflow: scroll;
+    }
+}
 @media (max-width: 375px){
     .programing-language-page {
         width: 100%;

@@ -14,6 +14,11 @@
 .icon-toolbar {
     // margin-top: 20px;
 }
+@media only screen and (max-width: 768px) {
+    .side_bar {
+        width: 8%;
+    }
+}
 @media only screen and (max-width: 375px) {
     .side_bar {
         width: 0;

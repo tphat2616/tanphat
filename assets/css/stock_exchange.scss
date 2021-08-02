@@ -39,6 +39,25 @@
 .stock-exchange-page__topic {
     height: 50%;
 }
+@media (max-width: 768px){
+    .stock-exchange-page {
+        width: 92%;
+        overflow-x: scroll;
+    }
+    .stock-exchange-page__topic {
+        height: 100%;
+    }
+    .cross-line{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .stock-exchange-page__index {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
 @media (max-width: 375px){
     .stock-exchange-page {
         width: 100%;

@@ -5,6 +5,11 @@
     width: 95.5%;
     height: 100%;
 }
+@media (max-width: 768px){
+    .home-page {
+        width: 92%;
+    }
+}
 @media (max-width: 375px){
     .home-page {
         width: 100%;

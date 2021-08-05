@@ -14,4 +14,16 @@ defmodule Tanphat.ApiService do
         Errors.get_error(:api, 1)
     end
   end
+
+  def eth_burned do
+    {:ok, %HTTPoison.Response{body: body}} =
+      HTTPoison.get("https://tanphat.dev:8080/api/eth/burn")
+
+    try do
+      Poison.decode!(body)
+    rescue
+      _ ->
+        Errors.get_error(:api, 2)
+    end
+  end
 end

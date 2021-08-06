@@ -32,6 +32,12 @@ defmodule TanphatWeb.PageRouter do
         live_action: :cryto_blog_show
       ],
       [
+        component: TanphatWeb.Cryptocurrency.EthBurned,
+        id: "eth-burned",
+        title: "ETH Burned",
+        live_action: :eth_burned
+      ],
+      [
         component: TanphatWeb.StockExchange.StockExchangeIndex,
         id: "stock-exchange",
         title: "Stock Exchange",

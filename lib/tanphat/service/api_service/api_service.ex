@@ -4,7 +4,7 @@ defmodule Tanphat.ApiService do
 
   def glo_and_com_index do
     {:ok, %HTTPoison.Response{body: body}} =
-      HTTPoison.get("https://tanphat.dev:8080/api/yahoo_finance/index")
+      HTTPoison.get("localhost:8081/api/yahoo_finance/index")
 
     try do
       Logger.debug("Data from Yahoo Finance: #{body}")
@@ -17,7 +17,7 @@ defmodule Tanphat.ApiService do
 
   def eth_burned do
     {:ok, %HTTPoison.Response{body: body}} =
-      HTTPoison.get("https://tanphat.dev:8080/api/eth/burn")
+      HTTPoison.get("localhost:8081/api/eth/burn")
 
     try do
       Poison.decode!(body)

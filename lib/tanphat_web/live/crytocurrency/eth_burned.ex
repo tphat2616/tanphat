@@ -6,7 +6,8 @@ defmodule TanphatWeb.Cryptocurrency.EthBurned do
     eth_burned = ApiService.eth_burned()
     total_burned = eth_burned["Total burned"]
     eth_price = ApiService.eth_price()
-    total = String.to_float(total_burned) * eth_price
+    price = eth_price["price"]
+    total = String.to_float(total_burned) * price
     money = total |> trunc()
     total_money = Number.Currency.number_to_currency(money)
     {:noreply, assign(socket, total_burned: total_burned, total_money: total_money)}

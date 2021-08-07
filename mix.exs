@@ -51,7 +51,8 @@ defmodule Tanphat.MixProject do
       {:quantum, "~> 3.0"},
       {:httpoison, "~> 1.8"},
       {:poison, "~> 4.0"},
-      {:logger_file_backend, "~> 0.0.11"}
+      {:logger_file_backend, "~> 0.0.11"},
+      {:number, "~> 1.0"}
     ]
   end
 

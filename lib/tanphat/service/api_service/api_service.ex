@@ -26,4 +26,16 @@ defmodule Tanphat.ApiService do
         Errors.get_error(:api, 2)
     end
   end
+
+  def eth_price do
+    {:ok, %HTTPoison.Response{body: body}} =
+      HTTPoison.get("localhost:8081/api/eth/price")
+
+    try do
+      Poison.decode!(body)
+    rescue
+      _ ->
+        Errors.get_error(:api, 2)
+    end
+  end
 end

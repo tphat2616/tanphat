@@ -1,0 +1,144 @@
+<div style="line-height: 1.5">
+    <div>
+        <h2>Garbage collection (GC) in erlang solves what a problem ?</h2>
+        <p>* Ý tưởng của ngôn ngữ erlang (elixir) là tạo ra một platform để lập trình viên có thể phát triển các ứng
+            dụng realtime và unstoppable (working 24/7).</p>
+        <p>* Một hệ thống như vậy đòi hỏi phải có một cơ chế GC nhanh tránh làm giảm tốc độ phản hồi của hệ thống.</p>
+        <p>* Và thêm một điểm cần lưu ít mọi kiểu dữ liệu trong Erlang đều là immutable nên tỉ lệ dữ liệu rác là rất
+            cao, gc cũng phải giải quyết vấn đề này.</p>
+    </div>
+    <div>
+        <h2>Actor model</h2>
+        <p>Có 2 điểm cần lưu ý về gc trong erlang:</p>
+        <ul>
+            <li>Erlang sử dụng mô hình actor model.</li>
+            <li>Mỗi process trong erlang đều có gc riêng của mình.</li>
+        </ul>
+        <strong>
+            <p>Vậy actor model là gì?</p>
+        </strong>
+        <p>Actor model là một mô hình thuật toán sử dụng trong các hệ thống concurrency.</p>
+        <br>
+        <strong>
+            <p>Vậy model này có gì đặc biệt?</p>
+        </strong>
+        <p>Đầu tiên ta phải làm rõ khái niệm process.</p>
+        <p>* Process hay còn gọi là thread là một kỹ thuật dùng để tận dụng hết được sức mạnh của một hệ thống có nhiều
+            core. Thường mỗi thread được sinh ra sẽ rất tốn tài nguyên của hệ thống và việc passing và đồng bộ dữ liệu
+            rất phức tạp.</p>
+        <p>* Nhưng process trong erlang là một thứ gì đó rất khác so với thread trong ngôn ngữ khác. Một process trong
+            erlang rất là lightweight. Một process sinh ra tốn 326 words (1 word trong hệ thống 32 bit tốn 4 bytes còn
+            64 bit là 8 bytes). Vậy thì một process trong erlang chỉ tốn khoảng 2.5 kb. Khi một hệ thống Beam được khởi
+            tạo thì default số process sinh ra là 32768 (tối đa lên tới 268 triệu processes).</p>
+        <img class="center-img" src="/images/beam.PNG" />
+        <br>
+        <p style="text-align: center">Mô hình erlang virtual machine (BEAM)</p>
+        <br>
+        <p>* Nhìn hình bên trên ta có thể thấy: Với mỗi single BEAM được khởi tạo các process hay còn gọi là các actor
+            được sinh ra và thực thi hoàn toàn độc lập với nhau. Các cụm Process được quản lý bởi các scheduler (sinh ra
+            tùy vào số core của CPU) chịu trách nhiệm quản lý các process này.</p>
+        <p>* Trong erlang mỗi process đều có GC riêng của chính mình</p>
+        <strong>
+            <p>=> Vậy ưu điểm của nó là gì?</p>
+        </strong>
+        <p>Ta sẽ so sánh GC trong erlang với các ngôn ngữ khác</p>
+        <p>* Phần lớn các ngôn ngữ lập trình hiện đại thì "stop all threads" khi GC runs (Nếu các threads này share
+            memory với nhau). Như Java, C#, Ruby, Python, etc.</p>
+        <p>* Từ nhược điểm các của ngôn ngữ trên t có thể suy ra nếu mỗi process có gc riêng của mình thì việc trigger
+            gc sẽ không ảnh hưởng tới nhau. Đáp ứng được yêu cầu reliable and unstoppable mà erlang đòi hỏi.</p>
+    </div>
+    <div>
+        <h2>Memory Layout</h2>
+        <img class="center-img" src="/images/memory_layout.PNG" />
+        <br>
+        <p style="text-align: center">Memory layout in Erlang.</p>
+        <br>
+        <p>Bố cục memory layout gồm 3 phần</p>
+        <ul>
+            <li>Process control block (PCB): chứa các thông tin để định danh process gồm: PID, Status, register name, …
+            </li>
+            <li>Stack: chứa biến function, địa chỉ, biến local, …</li>
+            <li>Process private heap: chứa mailbox messages, ProBIn, ...</li>
+        </ul>
+        <p>Có một số điểm cần lưu ý:</p>
+        <ul>
+            <li>Khi một process được tạo ra thì stack và heap được bố trí trên cùng một vùng nhớ.</li>
+            <li>Khi stack size và heap size càng lớn lên chiếm hết phần free space thì GC sẽ được trigger.</li>
+            <li>ProcBin là một cơ chế lưu trữ dữ liệu lớn hơn 64 bytes sẽ được nói rõ ở phần GC.</li>
+            <li>Để có thể check được các thông tin về memory layout ta sử dụng ":erlang.process_info(process_pid)". Ta
+                sẽ được thông tin như hình bên dưới.</li>
+        </ul>
+        <img class="center-img-special" src="/images/cmd.PNG" />
+        <br>
+        <p style="text-align: center">Process info.</p>
+        <br>
+    </div>
+    <div>
+        <h2>Garbage Collection</h2>
+        <p>Ý tưởng: Mỗi process trong erlang có stack và heap của riêng mình được bố trí trên cùng một vùng nhớ. Khi
+            stack và heap gặp nhau (nghĩa là vùng nhớ free space đã hết) thì GC sẽ được trigger và tiến hành dọn dẹp.
+            Nếu vẫn không đủ bộ nhớ thì heap sẽ được gấp đôi lên.</p>
+        <br>
+        <strong>
+            <p>Nhìn ở hình memory layout thì ta thấy có 2 vùng nhớ heap: 1 là private heap, 2 là shared heap. Tại sao?
+            </p>
+        </strong>
+        <p>Trong erlang các data dưới 64 bytes sẽ được lưu ở vùng nhớ process của chính process còn những gói data từ 64
+            bytes trở lên sẽ được lưu ở vùng nhớ shared heap. Vùng shared là vùng nhớ chung của các process. Các gói
+            data này hay còn gọi là Reference counted Binary (gồm: object size, số process trỏ tới, ...), các process
+            khi gửi data vào shared heap sẽ nhận pointer tới Refc binary (ProcBin) để có thể truy cập được gói data đó.
+            Khi process passing dữ liệu trong shared heap thì chúng gửi ProcBin cho nhau thay vì toàn bộ gói data.</p>
+        <br>
+        <p>Có 2 loại garbage collection trong erlang:</p>
+        <ul>
+            <li>Generational Copying garbage collection chạy trong mỗi Process private heap một cách độc lập.</li>
+            <li>Reference Counting garbage collection chạy trong shared heap.</li>
+        </ul>
+        <p>Generational GC chia heap làm 2 segments: young and old generations.</p>
+        <ul>
+            <li>Young generation giúp phân bổ vùng nhớ cho dữ liệu mới.</li>
+            <li>Old generation thì xử lý dữ liệu vẫn còn sau khi GC đã dọn dẹp.</li>
+            <li></li>
+        </ul>
+        <p>Tác dụng của việc chia này giúp GC giảm các chu trình dọn dẹp với các dữ liệu chưa trở thành rác.</p>
+        <p>Trong quá trình dọn rác thì GC có 2 chiến lược: Generational (Minor) và Fullsweep (Major):</p>
+        <ul>
+            <li>Generational GC chỉ dọn dẹp ở segment young heap.</li>
+            <li>Fullsweep dọn dẹp ở cả young và old heap.</li>
+        </ul>
+        <p>Các kịch bản xảy ra đổi với GC ở private heap:</p>
+        <ul>
+            <li>Spawn > No GC > Terminate: Process được sinh ra và không có nhu cầu sử dụng thêm vùng nhớ của heap nên
+                không có quá trình GC nào xảy ra cho tới lúc kết thúc.</li>
+            <li>Spawn > Fullsweep > Generational > Terminate: Process được sinh ra và do data lớn nên có nhu cầu sử dụng
+                thêm vùng nhớ của heap. min_heap_size sử dụng fullsweep GC. Do chưa có GC nào xảy ra trước đó nên chưa
+                có sự phân chia heap thành young và old generation. Sau khi fullsweep GC đầu tiên thực thì heap sẽ được
+                phân chia và sẽ chuyển qua chạy Generational cho tới khi process kết thúc.</li>
+            <li>Spawn > Fullsweep > Generational > Fullsweep > Generational > ... > Terminate: Tương tự như kịch bản số
+                2 nhưng khi có Generational không collect đủ bộ nhớ thì garbage_collect(PID) sẽ được gọi để switch lại
+                Fullsweep.</li>
+            <li>Spawn > Fullsweep > Generational > Fullsweep > Increase Heap > Fullsweep > ... > Terminate: Ở kịch bản
+                số 3 nếu Fullsweep không collect đủ bộ nhớ thì heap size sẽ được tăng lên.</li>
+        </ul>
+        <p>GC ở shared heap.</p>
+        <ul>
+            <li>Khi refc binary trở về giá trị 0 nghĩa là k có process nào tham chiếu tới nó thì gc sẽ được trigger để
+                xóa object đó.</li>
+        </ul>
+        <p>Một điểm cần lưu ý. GC có thể gây ra tình trạng memory leak, một vài phương án giải quyết:</p>
+        <ul>
+            <li>Sử dụng flag fullsweep_after</li>
+            <li>Sử dụng :hibernate.</li>
+        </ul>
+        <h3>Tài liệu tham khảo thêm:</h3>
+        <a
+            href="https://hamidreza-s.github.io/erlang%20garbage%20collection%20memory%20layout%20soft%20realtime/2015/08/24/erlang-garbage-collection-details-and-why-it-matters.html">Erlang
+            Garbage Collection Details and Why It Matters</a><br>
+        <a href="https://www.erlang-solutions.com/blog/erlang-garbage-collector/">Erlang Garbage Collector</a><br>
+        <a href="http://erlang.org/pipermail/erlang-questions/2010-October/053816.html">How GC works on other
+            languages</a><br>
+        <a href="https://erlang.org/doc/apps/erts/GarbageCollection.html">Erlang homepage</a>
+        <br>
+        <br>
+    </div>
+</div>

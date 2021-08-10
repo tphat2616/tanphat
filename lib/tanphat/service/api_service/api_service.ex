@@ -16,8 +16,7 @@ defmodule Tanphat.ApiService do
   end
 
   def eth_burned do
-    {:ok, %HTTPoison.Response{body: body}} =
-      HTTPoison.get("localhost:8081/api/eth/burn")
+    {:ok, %HTTPoison.Response{body: body}} = HTTPoison.get("localhost:8081/api/eth/burn")
 
     try do
       Poison.decode!(body)
@@ -28,8 +27,7 @@ defmodule Tanphat.ApiService do
   end
 
   def eth_price do
-    {:ok, %HTTPoison.Response{body: body}} =
-      HTTPoison.get("localhost:8081/api/eth/price")
+    {:ok, %HTTPoison.Response{body: body}} = HTTPoison.get("localhost:8081/api/eth/price")
 
     try do
       Poison.decode!(body)

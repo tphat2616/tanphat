@@ -38,7 +38,7 @@ defmodule TanphatWeb.Router do
   scope "/", TanphatWeb do
     pipe_through :browser
 
-    get "/coming-soon", PageLive, :coming_soon
+    get "/coming-soon", ErrorController, :coming_soon
   end
 
   # Other scopes may use custom stacks.

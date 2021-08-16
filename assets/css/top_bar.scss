@@ -17,6 +17,7 @@
 .bottom-bar{
     position: fixed;
     bottom: 0;
+    width: 100%;
 }
 .menu-img {
     visibility: hidden;
@@ -70,5 +71,7 @@
     }
     .bottom-bar {
         visibility: hidden;
+        height: 0;
+        width: 0;
     }
 }

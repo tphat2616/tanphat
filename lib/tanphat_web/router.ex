@@ -33,6 +33,7 @@ defmodule TanphatWeb.Router do
     live("/ultilities/:id", PageLive, :ultility_blog_show)
     live("/programing-languages/:id", PageLive, :programing_language_blog_show)
     live("/eth/burn", PageLive, :eth_burned)
+    live("/coin360", PageLive, :coin360)
   end
 
   scope "/", TanphatWeb do

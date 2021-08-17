@@ -38,6 +38,12 @@ defmodule TanphatWeb.PageRouter do
         live_action: :eth_burned
       ],
       [
+        component: TanphatWeb.Cryptocurrency.Coin360,
+        id: "coin360",
+        title: "Coin360 View",
+        live_action: :coin360
+      ],
+      [
         component: TanphatWeb.StockExchange.StockExchangeIndex,
         id: "stock-exchange",
         title: "Stock Exchange",

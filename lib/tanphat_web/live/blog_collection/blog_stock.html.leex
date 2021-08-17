@@ -1,24 +1,78 @@
 <div class="grid-group">
     <%= for blog <- assigns[:blogs] do %>
         <%= if blog.release? == true do %>
-            <%= live_patch class: "grid-item-3", to: Routes.page_path(@socket, :stock_blog_show, blog.id) do %>
-                <div >
-                    <div>
-                        <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />
-                    </div>
-                    <h3>
-                        <span><%= Printer.translate_data blog, :title %></span>
-                    </h3>
-                    <div class="grid-item_icon-group">
-                        <img class="grid-item_icon-group_img" src="/images/thumb-up.png" alt="" />
-                        <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :like %></span>
-                        <img class="grid-item_icon-group_img_2" src="/images/thumb-down.png" alt="" />
-                        <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :dislike %></span>
-                    </div>
-                </div>
+            <%= cond do %>
+                <% blog.id == 81 -> %>
+                    <%= link class: "grid-item-3", to: Routes.share_path(@socket, :market) do %>
+                        <div >
+                            <div>
+                                <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />
+                            </div>
+                            <h3>
+                                <span><%= Printer.translate_data blog, :title %></span>
+                            </h3>
+                            <div class="grid-item_icon-group">
+                                <img class="grid-item_icon-group_img" src="/images/thumb-up.png" alt="" />
+                                <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :like %></span>
+                                <img class="grid-item_icon-group_img_2" src="/images/thumb-down.png" alt="" />
+                                <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :dislike %></span>
+                            </div>
+                        </div>
+                    <% end %>
+                <% blog.id == 82 -> %>
+                    <%= link class: "grid-item-3", to: Routes.share_path(@socket, :forex_cross_rate) do %>
+                        <div >
+                            <div>
+                                <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />
+                            </div>
+                            <h3>
+                                <span><%= Printer.translate_data blog, :title %></span>
+                            </h3>
+                            <div class="grid-item_icon-group">
+                                <img class="grid-item_icon-group_img" src="/images/thumb-up.png" alt="" />
+                                <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :like %></span>
+                                <img class="grid-item_icon-group_img_2" src="/images/thumb-down.png" alt="" />
+                                <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :dislike %></span>
+                            </div>
+                        </div>
+                    <% end %>
+                <% blog.id == 83 -> %>
+                    <%= link class: "grid-item-3", to: Routes.share_path(@socket, :forex_heat) do %>
+                        <div >
+                            <div>
+                                <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />
+                            </div>
+                            <h3>
+                                <span><%= Printer.translate_data blog, :title %></span>
+                            </h3>
+                            <div class="grid-item_icon-group">
+                                <img class="grid-item_icon-group_img" src="/images/thumb-up.png" alt="" />
+                                <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :like %></span>
+                                <img class="grid-item_icon-group_img_2" src="/images/thumb-down.png" alt="" />
+                                <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :dislike %></span>
+                            </div>
+                        </div>
+                    <% end %>
+                <% true -> %>
+                    <%= live_patch class: "grid-item-3", to: Routes.page_path(@socket, :stock_blog_show, blog.id) do %>
+                        <div >
+                            <div>
+                                <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />
+                            </div>
+                            <h3>
+                                <span><%= Printer.translate_data blog, :title %></span>
+                            </h3>
+                            <div class="grid-item_icon-group">
+                                <img class="grid-item_icon-group_img" src="/images/thumb-up.png" alt="" />
+                                <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :like %></span>
+                                <img class="grid-item_icon-group_img_2" src="/images/thumb-down.png" alt="" />
+                                <span class="grid-item_icon-group_element"><%= Printer.translate_data blog, :dislike %></span>
+                            </div>
+                        </div>
+                    <% end %>
             <% end %>
         <% else  %>
-            <%= live_patch class: "grid-item-disable", to: Routes.page_path(@socket, :stock_blog_show, blog.id) do %>
+            <%= live_patch class: "grid-item-disable", to: Routes.page_path(@socket, :cryto_blog_show, blog.id) do %>
                 <div >
                     <div>
                         <img style="width: 50px; height: 50px" src="/images/topic.png" alt="Blog image" />

@@ -40,6 +40,11 @@ defmodule TanphatWeb.Router do
     pipe_through :browser
 
     get "/coming-soon", ErrorController, :coming_soon
+    get "/market/crypto", ShareController, :cryto_market
+    get "/chart", ShareController, :chart
+    get "/market", ShareController, :market
+    get "/forex/rate", ShareController, :forex_cross_rate
+    get "/forex/heat", ShareController, :forex_heat
   end
 
   # Other scopes may use custom stacks.

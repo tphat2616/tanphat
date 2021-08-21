@@ -1,5 +1,6 @@
 defmodule TanphatWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :tanphat
+  use Appsignal.Phoenix
   plug Plug.RequestId
   plug TanphatWeb.Plugs.ClientIp
   plug Plug.Logger

@@ -35,6 +35,9 @@ defmodule TanphatWeb.Router do
     live("/eth/burn", PageLive, :eth_burned)
     live("/coin360", PageLive, :coin360)
     live("/distributed-system", PageLive, :distributed_system)
+    live("/the-art-of-computer-programing/vol-1", PageLive, :art_of_cp)
+    live("/bitcoin-whipaper/en", PageLive, :btc_whitepaper_en)
+    live("/bitcoin-whipaper/vn", PageLive, :btc_whitepaper_vn)
   end
 
   scope "/", TanphatWeb do

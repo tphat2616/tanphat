@@ -86,6 +86,18 @@ defmodule TanphatWeb.PageRouter do
         live_action: :art_of_cp
       ],
       [
+        component: TanphatWeb.Artical.BtcWhitepaperEn,
+        id: "btc-whipaper-en",
+        title: "Bitcoin Whitepaper",
+        live_action: :btc_whitepaper_en
+      ],
+      [
+        component: TanphatWeb.Artical.BtcWhitepaperVn,
+        id: "btc-whipaper-vn",
+        title: "Bitcoin Whitepaper",
+        live_action: :btc_whitepaper_vn
+      ],
+      [
         component: TanphatWeb.Artical.Show,
         id: "blog-artical-page",
         title: "Scientific Artical Blogs",

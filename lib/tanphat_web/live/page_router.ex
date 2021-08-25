@@ -74,6 +74,12 @@ defmodule TanphatWeb.PageRouter do
         live_action: :artical
       ],
       [
+        component: TanphatWeb.Artical.DistributedSystem,
+        id: "distributed-system",
+        title: "Distributed System",
+        live_action: :distributed_system
+      ],
+      [
         component: TanphatWeb.Artical.Show,
         id: "blog-artical-page",
         title: "Scientific Artical Blogs",

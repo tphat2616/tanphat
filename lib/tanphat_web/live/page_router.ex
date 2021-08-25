@@ -80,6 +80,12 @@ defmodule TanphatWeb.PageRouter do
         live_action: :distributed_system
       ],
       [
+        component: TanphatWeb.Artical.ArtOfCp,
+        id: "the-art-of-cp",
+        title: "The Art Of ComputerPrograming",
+        live_action: :art_of_cp
+      ],
+      [
         component: TanphatWeb.Artical.Show,
         id: "blog-artical-page",
         title: "Scientific Artical Blogs",

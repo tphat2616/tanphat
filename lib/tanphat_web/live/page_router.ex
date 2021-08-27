@@ -98,6 +98,12 @@ defmodule TanphatWeb.PageRouter do
         live_action: :btc_whitepaper_vn
       ],
       [
+        component: TanphatWeb.Artical.MapReduce,
+        id: "map-reduce",
+        title: "MapReduce by Google",
+        live_action: :map_reduce
+      ],
+      [
         component: TanphatWeb.Artical.Show,
         id: "blog-artical-page",
         title: "Scientific Artical Blogs",

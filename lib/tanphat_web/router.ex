@@ -38,6 +38,7 @@ defmodule TanphatWeb.Router do
     live("/the-art-of-computer-programing/vol-1", PageLive, :art_of_cp)
     live("/bitcoin-whipaper/en", PageLive, :btc_whitepaper_en)
     live("/bitcoin-whipaper/vn", PageLive, :btc_whitepaper_vn)
+    live("/map-reduce", PageLive, :map_reduce)
   end
 
   scope "/", TanphatWeb do

@@ -1,8 +1,5 @@
 <div style="line-height: 2">
-    <h2>
-        Ruby
-    </h2>
-    <strong></strong>
+    <h2>Ruby</h2>
     <p>Ruby là một ngôn ngữ thông dịch <strong>(interpreted language)</strong>.</p>
     <p>Ruby là một ngôn ngữ <strong>OOP</strong>.</p>
     <p><strong>“Everything in ruby is object”</strong> (giống với Python).</p>
@@ -31,8 +28,8 @@
     <p>Ruby có hỗ trợ <strong>Conditional Operator</strong>.</p>
     <p>Ruby hỗ trợ một vài conventional syntax: 1..10, 1_000_000</p>
     <p><strong>“Defined?”</strong> dùng để truy xuất thông tin biến, function.</p>
-    <p><strong>“::” cho phép constant, instance, class định nghĩa bên trong class hoặc module và có thể truy cập bên
-            ngoài class hoặc module. Ngoài ra còn dùng để truy cập constant của class</strong></p>
+    <p><strong>“::” cho phép constant, instance, class định nghĩa bên trong class hoặc module và có thể truy cập
+            bênngoài class hoặc module. Ngoài ra còn dùng để truy cập constant của class</strong></p>
     <p>Vì là một ngôn ngữ OOP nên Ruby có:</p>
     <ul>
         <li>Phương thức khởi tạo trong Ruby (constructor): <strong>initialize</strong></li>
@@ -57,8 +54,205 @@
         <li><strong>Kế thừa (Polymorphism)</strong></li>
     </ul>
     <p>Ruby hỗ trợ chặn việc thay đổi object: <strong>Object.freeze</strong></p>
-    <h2>
-        Ruby on Rails
-    </h2>
-    <br>
+    <h2>Ruby on Rails</h2>
+    <p>Create new project:<strong> rails new APP_PATH --option</strong></p>
+    <p>Options:</p>
+    <p><a href="https://guides.rubyonrails.org/command_line.html">Command Line in rails</a></p>
+    <h3>Rails source tree</h3>
+    <table class="table-style">
+        <tr>
+            <td rowspan="9">app/</td>
+            <td>assets</td>
+            <td>Chứa tài nguyên: css, image.</td>
+        </tr>
+        <tr>
+            <td>channels</td>
+            <td>channels</td>
+        </tr>
+        <tr>
+            <td>controllers</td>
+            <td>Controller files</td>
+        </tr>
+        <tr>
+            <td>helpers</td>
+            <td>Shared module</td>
+        </tr>
+        <tr>
+            <td>javascript</td>
+            <td>Js files</td>
+        </tr>
+        <tr>
+            <td>jobs</td>
+            <td>background jobs</td>
+        </tr>
+        <tr>
+            <td>mailers</td>
+            <td>Module mail</td>
+        </tr>
+        <tr>
+            <td>models</td>
+            <td>Model files</td>
+        </tr>
+        <tr>
+            <td>views</td>
+        </tr>
+        <tr>
+            <td rowspan="2">bin/</td>
+            <td>Bundle.cmd (<strong style="color: red">bundle install = mix deps.get</strong>)</td>
+            <td>Chứa rails scripts (file build của rails.)</td>
+        </tr>
+        <tr>
+            <td>...</td>
+        </tr>
+        <tr>
+            <td rowspan="9">config/</td>
+            <td>environments</td>
+            <td>Chứa biến môi trường, tương ứng với 3 môi trường dev, prod, test.</td>
+        </tr>
+        <tr>
+            <td>Initializers</td>
+            <td>_</td>
+        </tr>
+        <tr>
+            <td>locals</td>
+            <td>Biến shared environments.</td>
+        </tr>
+        <tr>
+            <td>webpack</td>
+        </tr>
+        <tr>
+            <td>application</td>
+            <td>Config extra app, engines và <strong style="color: red">initialized app</strong></td>
+        </tr>
+        <tr>
+            <td>database.yml</td>
+            <td><strong style="color: red">Config database cho 3 môi trường</strong></td>
+        </tr>
+        <tr>
+            <td>routes.rb</td>
+            <td><strong style="color: red">Config router</strong></td>
+        </tr>
+        <tr>
+            <td>webpack.yml</td>
+            <td><strong style="color: red">Build, đóng gói tài nguyên để chạy trên prod</strong></td>
+        </tr>
+        <tr>
+            <td>puma.rb</td>
+            <td><strong style="color: red">Change default port (3000).</strong></td>
+        </tr>
+        <tr>
+            <td>db/</td>
+            <td>migrate</td>
+            <td><strong style="color: red">Chứa file migration (giao tiếp ORM ở đây).</strong></td>
+        </tr>
+        <tr>
+            <td>lib/</td>
+            <td></td>
+            <td>Library package.</td>
+        </tr>
+        <tr>
+            <td>log/</td>
+            <td></td>
+            <td>Logger files.</td>
+        </tr>
+        <tr>
+            <td>node_modules/</td>
+            <td></td>
+            <td>Node packages.</td>
+        </tr>
+        <tr>
+            <td>public/</td>
+            <td></td>
+            <td>Public Shared html, js, img.</td>
+        </tr>
+        <tr>
+            <td>storage/</td>
+            <td></td>
+            <td>_</td>
+        </tr>
+        <tr>
+            <td>test/</td>
+            <td></td>
+            <td><strong style="color: red">Test files.</strong></td>
+        </tr>
+        <tr>
+            <td>tmp/</td>
+            <td></td>
+            <td>Bộ nhớ temporary (<strong style="color: red">clear cache ở đây</strong>).</td>
+        </tr>
+        <tr>
+            <td>vendor/</td>
+            <td></td>
+            <td>Third-party vendor.</td>
+        </tr>
+        <tr>
+            <td>Gemfile/</td>
+            <td></td>
+            <td><strong style="color: red">Add gem package.</strong></td>
+        </tr>
+    </table>
+    <h3>Command line in rails.</h3>
+    <ul>
+        <li>bin/rails console</li>
+        <li>bin/rails server</li>
+        <li>bin/rails test</li>
+        <li>bin/rails generate</li>
+        <li>bin/rails db:migrate</li>
+        <li>bin/rails db:create</li>
+        <li>bin/rails routes</li>
+        <li>bin/rails dbconsole</li>
+        <li>rails new app_name</li>
+    </ul>
+    <p><a href="https://guides.rubyonrails.org/command_line.html">Command Line in rails</a></p>
+    <h3>MVC (Model - View - Controller)</h3><img class="center-img" src="/images/mvc.jpg" /><br>
+    <p style="text-align: center">MVC model</p><br>
+    <p><strong>Controller</strong> nhận request từ web browser, giao tiếp với db và thực hiện CRUD action dựa trên
+        <strong>Model</strong>. <strong>View</strong> có nhiệm vụ là respond về cho user.</p>
+    <h3>MODEL</h3>
+    <p><strong>ORM in rail: Active Record</strong></p>
+    <ul>
+        <li>Migration, migrate tương tự như trong Phoenix.</li>
+        <li>Hỗ trợ đầy đủ validate, callback, associate, query interface.</li>
+        <li>Active model:</li>
+        <ul>
+            <li>ActiveModel::AttributeMethods: cho phép custom tiền tố và hậu tố thuộc tính của class.</li>
+            <li>ActiveModel::Callbacks: tạo callback dùng chung before, after.</li>
+            <li>ActiveModel::Conversion: …</li>
+            <li>ActiveModel::Dirty: Check thuộc tính trong class có bị thay đổi hay không.</li>
+            <li>ActiveModel::Validations: validation.</li>
+            <li>ActiveModel::Naming: naming.</li>
+            <li>...</li>
+        </ul>
+    </ul>
+    <H3>VIEWS</H3>
+    <p>Handle by<strong>Action view</strong></p>
+    <h4>Template</h4>
+    <ul>
+        <li>Rails hỗ trợ compile html code bằng “erb”.</li>
+        <li>Hỗ trợ cả html bằng định dạng html.erb.</li>
+        <li>
+            <.%= %>: thực thi không in ra kết quả
+        </li>
+        <li>
+            <.% %>: in ra kết quả.
+        </li>
+    </ul>
+    <h4>Partials</h4>
+    <p>Hỗ trợ reuse component.</p>
+    <p>
+        <.%= render "menu" %>
+    </p>
+    <h4>View Path</h4>
+    <p>Config directory location.</p>
+    <h4>Localized Views</h4>
+    <p>Config template cho locale.</p>
+    <h3>Controllers</h3>
+    <p>Handle by <strong>Action Controller</strong>.</p><br>
+    <p>Action Mail: Mail.</p>
+    <p>Action Text: format text.</p>
+    <p>Action jobs: cron jobs.</p>
+    <p>Action Storage: file, cloud storage,...</p>
+    <p>Action cable: realtime websocket.</p>
+    <p>I18n API: Multiple languages</p>
+    <p>...</p><br><br>
 </div>

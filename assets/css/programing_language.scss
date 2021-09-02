@@ -5,6 +5,17 @@
     width: 95.5%;
     height: 100%;
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td {
+    padding: 5px 5px 0 5px;
+}
 @media (max-width: 768px){
     .programing-language-page {
         width: 92%;

@@ -53,7 +53,7 @@ defmodule Tanphat.MixProject do
       {:poison, "~> 4.0"},
       {:logger_file_backend, "~> 0.0.11"},
       {:number, "~> 1.0"},
-      {:appsignal, "~> 2.0"},
+      {:appsignal, "~> 2.2"},
       {:appsignal_phoenix, "~> 2.0.0"}
     ]
   end

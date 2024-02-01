@@ -6,8 +6,8 @@ use Mix.Config
 
 config :tanphat, Tanphat.Repo,
   username: "postgres",
-  password: "09098237720aA@",
-  database: "tphat2616",
+  password: "",
+  database: "",
   hostname: "51.79.165.79",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
